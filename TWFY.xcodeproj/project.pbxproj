@@ -24,6 +24,8 @@
 		2248FEE7165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
 		2248FEEF165BAE7A00723210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2248FEED165BAE7A00723210 /* InfoPlist.strings */; };
 		2248FEF2165BAE7A00723210 /* TWFYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FEF1165BAE7A00723210 /* TWFYTests.m */; };
+		2248FEFF165BAFE300723210 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEFE165BAFE300723210 /* libKiwi.a */; };
+		2248FF03165BB01700723210 /* KiwiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF02165BB01700723210 /* KiwiTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		2248FEEE165BAE7A00723210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2248FEF0165BAE7A00723210 /* TWFYTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFYTests.h; sourceTree = "<group>"; };
 		2248FEF1165BAE7A00723210 /* TWFYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWFYTests.m; sourceTree = "<group>"; };
+		2248FEFE165BAFE300723210 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		2248FF02165BB01700723210 /* KiwiTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2248FEFF165BAFE300723210 /* libKiwi.a in Frameworks */,
 				2248FEE5165BAE7A00723210 /* SenTestingKit.framework in Frameworks */,
 				2248FEE6165BAE7A00723210 /* UIKit.framework in Frameworks */,
 				2248FEE7165BAE7A00723210 /* Foundation.framework in Frameworks */,
@@ -108,6 +113,7 @@
 		2248FEBC165BAE7A00723210 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2248FEFE165BAFE300723210 /* libKiwi.a */,
 				2248FEBD165BAE7A00723210 /* UIKit.framework */,
 				2248FEBF165BAE7A00723210 /* Foundation.framework */,
 				2248FEC1165BAE7A00723210 /* CoreGraphics.framework */,
@@ -147,6 +153,7 @@
 		2248FEEA165BAE7A00723210 /* TWFYTests */ = {
 			isa = PBXGroup;
 			children = (
+				2248FF00165BB00600723210 /* Kiwi Tests */,
 				2248FEF0165BAE7A00723210 /* TWFYTests.h */,
 				2248FEF1165BAE7A00723210 /* TWFYTests.m */,
 				2248FEEB165BAE7A00723210 /* Supporting Files */,
@@ -161,6 +168,14 @@
 				2248FEED165BAE7A00723210 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2248FF00165BB00600723210 /* Kiwi Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2248FF02165BB01700723210 /* KiwiTest.m */,
+			);
+			name = "Kiwi Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2248FEF2165BAE7A00723210 /* TWFYTests.m in Sources */,
+				2248FF03165BB01700723210 /* KiwiTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +436,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TWFY/TWFY-Prefix.pch";
 				INFOPLIST_FILE = "TWFYTests/TWFYTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/Kiwi/Kiwi";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -437,8 +455,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TWFY/TWFY-Prefix.pch";
 				INFOPLIST_FILE = "TWFYTests/TWFYTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/Frameworks/Kiwi/Kiwi";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
