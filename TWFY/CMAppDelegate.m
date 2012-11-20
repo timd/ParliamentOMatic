@@ -9,6 +9,7 @@
 #import "CMAppDelegate.h"
 
 #import "CMViewController.h"
+#import "CMParser.h"
 
 @implementation CMAppDelegate
 
@@ -18,8 +19,11 @@
     // Override point for customization after application launch.
     
     // Initialise Magical Record
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"TWFY.sql"];
-    
+    [MagicalRecord setupAutoMigratingCoreDataStack];
+
+    // Create initial MP objects
+    CMParser *parser = [[CMParser alloc] init];
+    [parser parseInitialAppData];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[CMViewController alloc] initWithNibName:@"CMViewController_iPhone" bundle:nil];

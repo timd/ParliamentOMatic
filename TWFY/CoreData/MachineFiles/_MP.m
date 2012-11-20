@@ -64,22 +64,22 @@ const struct MPFetchedProperties MPFetchedProperties = {
 
 
 
-- (int16_t)member_idValue {
+- (int32_t)member_idValue {
 	NSNumber *result = [self member_id];
-	return [result shortValue];
+	return [result intValue];
 }
 
-- (void)setMember_idValue:(int16_t)value_ {
-	[self setMember_id:[NSNumber numberWithShort:value_]];
+- (void)setMember_idValue:(int32_t)value_ {
+	[self setMember_id:[NSNumber numberWithInt:value_]];
 }
 
-- (int16_t)primitiveMember_idValue {
+- (int32_t)primitiveMember_idValue {
 	NSNumber *result = [self primitiveMember_id];
-	return [result shortValue];
+	return [result intValue];
 }
 
-- (void)setPrimitiveMember_idValue:(int16_t)value_ {
-	[self setPrimitiveMember_id:[NSNumber numberWithShort:value_]];
+- (void)setPrimitiveMember_idValue:(int32_t)value_ {
+	[self setPrimitiveMember_id:[NSNumber numberWithInt:value_]];
 }
 
 
@@ -97,22 +97,22 @@ const struct MPFetchedProperties MPFetchedProperties = {
 
 
 
-- (int16_t)person_idValue {
+- (int32_t)person_idValue {
 	NSNumber *result = [self person_id];
-	return [result shortValue];
+	return [result intValue];
 }
 
-- (void)setPerson_idValue:(int16_t)value_ {
-	[self setPerson_id:[NSNumber numberWithShort:value_]];
+- (void)setPerson_idValue:(int32_t)value_ {
+	[self setPerson_id:[NSNumber numberWithInt:value_]];
 }
 
-- (int16_t)primitivePerson_idValue {
+- (int32_t)primitivePerson_idValue {
 	NSNumber *result = [self primitivePerson_id];
-	return [result shortValue];
+	return [result intValue];
 }
 
-- (void)setPrimitivePerson_idValue:(int16_t)value_ {
-	[self setPrimitivePerson_id:[NSNumber numberWithShort:value_]];
+- (void)setPrimitivePerson_idValue:(int32_t)value_ {
+	[self setPrimitivePerson_id:[NSNumber numberWithInt:value_]];
 }
 
 

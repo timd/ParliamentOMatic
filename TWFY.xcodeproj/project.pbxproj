@@ -21,6 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		22086F93165BD3BE003AAE61 /* test-update.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F92165BD3BE003AAE61 /* test-update.json */; };
+		22086F96165BD803003AAE61 /* UpdateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086F95165BD803003AAE61 /* UpdateTests.m */; };
+		22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086F9B165BE01D003AAE61 /* InitialDataTests.m */; };
+		22086F9E165BE591003AAE61 /* allMPs.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F9D165BE591003AAE61 /* allMPs.json */; };
+		22086F9F165BE591003AAE61 /* allMPs.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F9D165BE591003AAE61 /* allMPs.json */; };
 		2248FEBE165BAE7A00723210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBD165BAE7A00723210 /* UIKit.framework */; };
 		2248FEC0165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
 		2248FEC2165BAE7A00723210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEC1165BAE7A00723210 /* CoreGraphics.framework */; };
@@ -38,7 +43,6 @@
 		2248FEE7165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
 		2248FEEF165BAE7A00723210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2248FEED165BAE7A00723210 /* InfoPlist.strings */; };
 		2248FEFF165BAFE300723210 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEFE165BAFE300723210 /* libKiwi.a */; };
-		2248FF03165BB01700723210 /* KiwiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF02165BB01700723210 /* KiwiTest.m */; };
 		2248FF42165BB11F00723210 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF0A165BB11F00723210 /* MagicalImportFunctions.m */; };
 		2248FF43165BB11F00723210 /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF0A165BB11F00723210 /* MagicalImportFunctions.m */; };
 		2248FF44165BB11F00723210 /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF0C165BB11F00723210 /* NSAttributeDescription+MagicalDataImport.m */; };
@@ -115,8 +119,8 @@
 		2248FFA1165BB27000723210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FF9F165BB26B00723210 /* SystemConfiguration.framework */; };
 		2248FFA7165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
 		2248FFA8165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
-		2248FFAB165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
-		2248FFAC165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
+		2248FFAB165BB39300723210 /* test-mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* test-mps.json */; };
+		2248FFAC165BB39300723210 /* test-mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* test-mps.json */; };
 		2248FFD5165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
 		2248FFD6165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
 		2248FFDF165BBAF200723210 /* Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDA165BBAF200723210 /* Constituency.m */; };
@@ -155,6 +159,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22086F92165BD3BE003AAE61 /* test-update.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-update.json"; sourceTree = "<group>"; };
+		22086F95165BD803003AAE61 /* UpdateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateTests.m; sourceTree = "<group>"; };
+		22086F9B165BE01D003AAE61 /* InitialDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialDataTests.m; sourceTree = "<group>"; };
+		22086F9D165BE591003AAE61 /* allMPs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allMPs.json; sourceTree = "<group>"; };
 		2248FEB9165BAE7A00723210 /* TWFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248FEBD165BAE7A00723210 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2248FEBF165BAE7A00723210 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,8 +184,7 @@
 		2248FEE4165BAE7A00723210 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2248FEEC165BAE7A00723210 /* TWFYTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TWFYTests-Info.plist"; sourceTree = "<group>"; };
 		2248FEEE165BAE7A00723210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2248FEFE165BAFE300723210 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
-		2248FF02165BB01700723210 /* KiwiTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiTest.m; sourceTree = "<group>"; };
+		2248FEFE165BAFE300723210 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		2248FF09165BB11F00723210 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		2248FF0A165BB11F00723210 /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
 		2248FF0B165BB11F00723210 /* NSAttributeDescription+MagicalDataImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributeDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
@@ -255,7 +262,7 @@
 		2248FF9F165BB26B00723210 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2248FFA5165BB38800723210 /* CMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMParser.h; sourceTree = "<group>"; };
 		2248FFA6165BB38800723210 /* CMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMParser.m; sourceTree = "<group>"; };
-		2248FFAA165BB39300723210 /* mps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mps.json; sourceTree = "<group>"; };
+		2248FFAA165BB39300723210 /* test-mps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-mps.json"; sourceTree = "<group>"; };
 		2248FFBA165BB3F900723210 /* MPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTests.m; sourceTree = "<group>"; };
 		2248FFBB165BB3F900723210 /* ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTests.m; sourceTree = "<group>"; };
 		2248FFBC165BB3F900723210 /* PartyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyTests.m; sourceTree = "<group>"; };
@@ -366,11 +373,8 @@
 		2248FEEA165BAE7A00723210 /* TWFYTests */ = {
 			isa = PBXGroup;
 			children = (
-				2248FFF6165BC32700723210 /* ConstituencyTests.m */,
-				2248FFBA165BB3F900723210 /* MPTests.m */,
-				2248FFBB165BB3F900723210 /* ParserTests.m */,
-				2248FFBC165BB3F900723210 /* PartyTests.m */,
-				2248FF00165BB00600723210 /* Kiwi Tests */,
+				2248FFFA165BC5CF00723210 /* Parser tests */,
+				2248FFF9165BC5C200723210 /* Object tests */,
 				2248FEEB165BAE7A00723210 /* Supporting Files */,
 			);
 			path = TWFYTests;
@@ -383,14 +387,6 @@
 				2248FEED165BAE7A00723210 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2248FF00165BB00600723210 /* Kiwi Tests */ = {
-			isa = PBXGroup;
-			children = (
-				2248FF02165BB01700723210 /* KiwiTest.m */,
-			);
-			name = "Kiwi Tests";
 			sourceTree = "<group>";
 		};
 		2248FF04165BB0E300723210 /* App delegate */ = {
@@ -543,7 +539,9 @@
 		2248FFA9165BB39300723210 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2248FFAA165BB39300723210 /* mps.json */,
+				22086F9D165BE591003AAE61 /* allMPs.json */,
+				2248FFAA165BB39300723210 /* test-mps.json */,
+				22086F92165BD3BE003AAE61 /* test-update.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -612,6 +610,26 @@
 				2248FFA6165BB38800723210 /* CMParser.m */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		2248FFF9165BC5C200723210 /* Object tests */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFF6165BC32700723210 /* ConstituencyTests.m */,
+				2248FFBA165BB3F900723210 /* MPTests.m */,
+				2248FFBC165BB3F900723210 /* PartyTests.m */,
+			);
+			name = "Object tests";
+			sourceTree = "<group>";
+		};
+		2248FFFA165BC5CF00723210 /* Parser tests */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFBB165BB3F900723210 /* ParserTests.m */,
+				22086F95165BD803003AAE61 /* UpdateTests.m */,
+				22086F9B165BE01D003AAE61 /* InitialDataTests.m */,
+			);
+			name = "Parser tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -694,7 +712,8 @@
 				2248FED4165BAE7A00723210 /* Default-568h@2x.png in Resources */,
 				2248FEDA165BAE7A00723210 /* CMViewController_iPhone.xib in Resources */,
 				2248FEDD165BAE7A00723210 /* CMViewController_iPad.xib in Resources */,
-				2248FFAB165BB39300723210 /* mps.json in Resources */,
+				2248FFAB165BB39300723210 /* test-mps.json in Resources */,
+				22086F9E165BE591003AAE61 /* allMPs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,7 +722,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2248FEEF165BAE7A00723210 /* InfoPlist.strings in Resources */,
-				2248FFAC165BB39300723210 /* mps.json in Resources */,
+				2248FFAC165BB39300723210 /* test-mps.json in Resources */,
+				22086F93165BD3BE003AAE61 /* test-update.json in Resources */,
+				22086F9F165BE591003AAE61 /* allMPs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,7 +755,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$(SOURCE_ROOT)mogenerator -m TWFY/CoreData/TWFY.xcdatamodeld/TWFY.xcdatamodel -M TWFY/CoreData/MachineFiles/  -H TWFY/CoreData/HumanFiles --template-var arc=true";
+			shellScript = "/usr/local/bin/mogenerator -m TWFY/CoreData/TWFY.xcdatamodeld/TWFY.xcdatamodel -M TWFY/CoreData/MachineFiles/  -H TWFY/CoreData/HumanFiles --template-var arc=true";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -799,7 +820,6 @@
 				2248FFF4165BBEE400723210 /* MPTests.m in Sources */,
 				2248FFF2165BBD5900723210 /* ParserTests.m in Sources */,
 				2248FFF3165BBD5900723210 /* PartyTests.m in Sources */,
-				2248FF03165BB01700723210 /* KiwiTest.m in Sources */,
 				2248FF43165BB11F00723210 /* MagicalImportFunctions.m in Sources */,
 				2248FF45165BB11F00723210 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
 				2248FF47165BB11F00723210 /* NSEntityDescription+MagicalDataImport.m in Sources */,
@@ -844,6 +864,8 @@
 				2248FFEE165BBAFB00723210 /* _MP.m in Sources */,
 				2248FFF0165BBAFB00723210 /* _Party.m in Sources */,
 				2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */,
+				22086F96165BD803003AAE61 /* UpdateTests.m in Sources */,
+				22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,6 +1063,7 @@
 				2248FEF7165BAE7A00723210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2248FEF8165BAE7A00723210 /* Build configuration list for PBXNativeTarget "TWFYTests" */ = {
 			isa = XCConfigurationList;
@@ -1049,6 +1072,7 @@
 				2248FEFA165BAE7A00723210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2248FFCB165BB6D400723210 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
 			isa = XCConfigurationList;
@@ -1057,6 +1081,7 @@
 				2248FFCD165BB6D400723210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

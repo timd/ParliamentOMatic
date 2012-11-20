@@ -10,6 +10,8 @@
 
 @interface CMParser : NSObject
 
+-(void)parseInitialAppData;
 -(void)parseMpDataWithJson:(NSString *)jsonFileName;
+-(void)updateDataWithJson:(NSString *)jsonFileName;
 
 @end
