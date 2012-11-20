@@ -16,6 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // Initialise Magical Record
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"TWFY.sql"];
+    
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[CMViewController alloc] initWithNibName:@"CMViewController_iPhone" bundle:nil];
     } else {
@@ -51,6 +56,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
 }
 
 @end

@@ -10,6 +10,11 @@
 
 SPEC_BEGIN(MathSpec)
 
+beforeEach(^{
+    [MagicalRecord setDefaultModelFromClass:[self class]];
+	[MagicalRecord setupCoreDataStackWithInMemoryStore];
+});
+
 describe(@"Math", ^{
     it(@"is pretty cool", ^{
         NSUInteger a = 16;
