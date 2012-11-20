@@ -38,6 +38,14 @@ describe(@"The MP object", ^{
         [[mp should] respondToSelector:@selector(person_id)];
     });
     
+    it(@"should have a party", ^{
+        [[mp should] respondToSelector:@selector(party)];
+    });
+    
+    it(@"should have a constituency", ^{
+        [[mp should] respondToSelector:@selector(constituency)];
+    });
+    
     afterEach(^{
         [MagicalRecord cleanUp];
     });

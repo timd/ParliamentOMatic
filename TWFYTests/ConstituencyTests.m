@@ -1,5 +1,5 @@
 //
-//  PartyTests.m
+//  ConstituencyTests.m
 //  TWFY
 //
 //  Created by Tim on 04/11/2012.
@@ -8,30 +8,30 @@
 
 #import "Kiwi.h"
 #import "CMParser.h"
-#import "Party.h"
+#import "Constituency.h"
 
-SPEC_BEGIN(PartyTests)
+SPEC_BEGIN(ConstituencyTests)
 
-describe(@"The Party object", ^{
+describe(@"The Constituency object", ^{
     
-    __block Party *party = nil;
+    __block Constituency *ctcy = nil;
     
     beforeEach(^{
         [MagicalRecord setDefaultModelFromClass:[self class]];
         [MagicalRecord setupCoreDataStackWithInMemoryStore];
-        party = [Party createEntity];
+        ctcy = [Constituency createEntity];
     });
     
     it(@"should exist", ^{
-        [party shouldNotBeNil];
+        [ctcy shouldNotBeNil];
     });
     
     it(@"should have a name", ^{
-        [[party should] respondToSelector:@selector(name)];
+        [[ctcy should] respondToSelector:@selector(name)];
     });
     
-    it(@"should have an MP", ^{
-        [[party should] respondToSelector:@selector(mps)];
+    it(@"should have a constituency", ^{
+        [[ctcy should] respondToSelector:@selector(mp)];
     });
     
     afterEach(^{
