@@ -115,8 +115,8 @@
 		2248FFA1165BB27000723210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FF9F165BB26B00723210 /* SystemConfiguration.framework */; };
 		2248FFA7165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
 		2248FFA8165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
-		2248FFAB165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
-		2248FFAC165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
+		2248FFAB165BB39300723210 /* test-mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* test-mps.json */; };
+		2248FFAC165BB39300723210 /* test-mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* test-mps.json */; };
 		2248FFD5165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
 		2248FFD6165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
 		2248FFDF165BBAF200723210 /* Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDA165BBAF200723210 /* Constituency.m */; };
@@ -176,7 +176,7 @@
 		2248FEE4165BAE7A00723210 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2248FEEC165BAE7A00723210 /* TWFYTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TWFYTests-Info.plist"; sourceTree = "<group>"; };
 		2248FEEE165BAE7A00723210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2248FEFE165BAFE300723210 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		2248FEFE165BAFE300723210 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Frameworks/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		2248FF02165BB01700723210 /* KiwiTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiTest.m; sourceTree = "<group>"; };
 		2248FF09165BB11F00723210 /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		2248FF0A165BB11F00723210 /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		2248FF9F165BB26B00723210 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2248FFA5165BB38800723210 /* CMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMParser.h; sourceTree = "<group>"; };
 		2248FFA6165BB38800723210 /* CMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMParser.m; sourceTree = "<group>"; };
-		2248FFAA165BB39300723210 /* mps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mps.json; sourceTree = "<group>"; };
+		2248FFAA165BB39300723210 /* test-mps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-mps.json"; sourceTree = "<group>"; };
 		2248FFBA165BB3F900723210 /* MPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTests.m; sourceTree = "<group>"; };
 		2248FFBB165BB3F900723210 /* ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTests.m; sourceTree = "<group>"; };
 		2248FFBC165BB3F900723210 /* PartyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyTests.m; sourceTree = "<group>"; };
@@ -366,10 +366,8 @@
 		2248FEEA165BAE7A00723210 /* TWFYTests */ = {
 			isa = PBXGroup;
 			children = (
-				2248FFF6165BC32700723210 /* ConstituencyTests.m */,
-				2248FFBA165BB3F900723210 /* MPTests.m */,
-				2248FFBB165BB3F900723210 /* ParserTests.m */,
-				2248FFBC165BB3F900723210 /* PartyTests.m */,
+				2248FFFA165BC5CF00723210 /* Parser tests */,
+				2248FFF9165BC5C200723210 /* Object tests */,
 				2248FF00165BB00600723210 /* Kiwi Tests */,
 				2248FEEB165BAE7A00723210 /* Supporting Files */,
 			);
@@ -543,7 +541,7 @@
 		2248FFA9165BB39300723210 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2248FFAA165BB39300723210 /* mps.json */,
+				2248FFAA165BB39300723210 /* test-mps.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -612,6 +610,24 @@
 				2248FFA6165BB38800723210 /* CMParser.m */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		2248FFF9165BC5C200723210 /* Object tests */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFF6165BC32700723210 /* ConstituencyTests.m */,
+				2248FFBA165BB3F900723210 /* MPTests.m */,
+				2248FFBC165BB3F900723210 /* PartyTests.m */,
+			);
+			name = "Object tests";
+			sourceTree = "<group>";
+		};
+		2248FFFA165BC5CF00723210 /* Parser tests */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFBB165BB3F900723210 /* ParserTests.m */,
+			);
+			name = "Parser tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -694,7 +710,7 @@
 				2248FED4165BAE7A00723210 /* Default-568h@2x.png in Resources */,
 				2248FEDA165BAE7A00723210 /* CMViewController_iPhone.xib in Resources */,
 				2248FEDD165BAE7A00723210 /* CMViewController_iPad.xib in Resources */,
-				2248FFAB165BB39300723210 /* mps.json in Resources */,
+				2248FFAB165BB39300723210 /* test-mps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,7 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2248FEEF165BAE7A00723210 /* InfoPlist.strings in Resources */,
-				2248FFAC165BB39300723210 /* mps.json in Resources */,
+				2248FFAC165BB39300723210 /* test-mps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,7 +750,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$(SOURCE_ROOT)mogenerator -m TWFY/CoreData/TWFY.xcdatamodeld/TWFY.xcdatamodel -M TWFY/CoreData/MachineFiles/  -H TWFY/CoreData/HumanFiles --template-var arc=true";
+			shellScript = "/usr/local/bin/mogenerator -m TWFY/CoreData/TWFY.xcdatamodeld/TWFY.xcdatamodel -M TWFY/CoreData/MachineFiles/  -H TWFY/CoreData/HumanFiles --template-var arc=true";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1041,6 +1057,7 @@
 				2248FEF7165BAE7A00723210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2248FEF8165BAE7A00723210 /* Build configuration list for PBXNativeTarget "TWFYTests" */ = {
 			isa = XCConfigurationList;
@@ -1049,6 +1066,7 @@
 				2248FEFA165BAE7A00723210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2248FFCB165BB6D400723210 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
 			isa = XCConfigurationList;
@@ -1057,6 +1075,7 @@
 				2248FFCD165BB6D400723210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
