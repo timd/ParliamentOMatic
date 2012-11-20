@@ -26,6 +26,12 @@
 		22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086F9B165BE01D003AAE61 /* InitialDataTests.m */; };
 		22086F9E165BE591003AAE61 /* allMPs.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F9D165BE591003AAE61 /* allMPs.json */; };
 		22086F9F165BE591003AAE61 /* allMPs.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F9D165BE591003AAE61 /* allMPs.json */; };
+		22086FBD165BEA8D003AAE61 /* CMMPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FBB165BEA8D003AAE61 /* CMMPTableViewController.m */; };
+		22086FC0165BEB59003AAE61 /* CMMPTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22086FBF165BEB59003AAE61 /* CMMPTableView.xib */; };
+		22086FC5165BEB74003AAE61 /* CMConstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FC3165BEB74003AAE61 /* CMConstViewController.m */; };
+		22086FC6165BEB74003AAE61 /* CMConstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22086FC4165BEB74003AAE61 /* CMConstView.xib */; };
+		22086FCE165BEE33003AAE61 /* CMMPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */; };
+		22086FCF165BEE33003AAE61 /* CMMPDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */; };
 		2248FEBE165BAE7A00723210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBD165BAE7A00723210 /* UIKit.framework */; };
 		2248FEC0165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
 		2248FEC2165BAE7A00723210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEC1165BAE7A00723210 /* CoreGraphics.framework */; };
@@ -139,6 +145,8 @@
 		2248FFF3165BBD5900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
 		2248FFF4165BBEE400723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
 		2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFF6165BC32700723210 /* ConstituencyTests.m */; };
+		227E3B11165BEF0E00F3483C /* CMConstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */; };
+		227E3B12165BEF0E00F3483C /* CMConstDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +171,15 @@
 		22086F95165BD803003AAE61 /* UpdateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateTests.m; sourceTree = "<group>"; };
 		22086F9B165BE01D003AAE61 /* InitialDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialDataTests.m; sourceTree = "<group>"; };
 		22086F9D165BE591003AAE61 /* allMPs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allMPs.json; sourceTree = "<group>"; };
+		22086FBA165BEA8D003AAE61 /* CMMPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMPTableViewController.h; sourceTree = "<group>"; };
+		22086FBB165BEA8D003AAE61 /* CMMPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMPTableViewController.m; sourceTree = "<group>"; };
+		22086FBF165BEB59003AAE61 /* CMMPTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMMPTableView.xib; sourceTree = "<group>"; };
+		22086FC2165BEB74003AAE61 /* CMConstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstViewController.h; sourceTree = "<group>"; };
+		22086FC3165BEB74003AAE61 /* CMConstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConstViewController.m; sourceTree = "<group>"; };
+		22086FC4165BEB74003AAE61 /* CMConstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstView.xib; sourceTree = "<group>"; };
+		22086FCB165BEE33003AAE61 /* CMMPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMPDetailViewController.h; sourceTree = "<group>"; };
+		22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMPDetailViewController.m; sourceTree = "<group>"; };
+		22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMMPDetailView.xib; sourceTree = "<group>"; };
 		2248FEB9165BAE7A00723210 /* TWFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248FEBD165BAE7A00723210 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2248FEBF165BAE7A00723210 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -280,6 +297,9 @@
 		2248FFE9165BBAFB00723210 /* _Party.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Party.h; sourceTree = "<group>"; };
 		2248FFEA165BBAFB00723210 /* _Party.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Party.m; sourceTree = "<group>"; };
 		2248FFF6165BC32700723210 /* ConstituencyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstituencyTests.m; sourceTree = "<group>"; };
+		227E3B0E165BEF0E00F3483C /* CMConstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstDetailViewController.h; sourceTree = "<group>"; };
+		227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConstDetailViewController.m; sourceTree = "<group>"; };
+		227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstDetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +331,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22086FB9165BEA64003AAE61 /* MPs */ = {
+			isa = PBXGroup;
+			children = (
+				22086FC8165BEDFD003AAE61 /* Table */,
+				22086FCA165BEE0D003AAE61 /* Detail */,
+			);
+			name = MPs;
+			sourceTree = "<group>";
+		};
+		22086FC1165BEB5E003AAE61 /* Constituencies */ = {
+			isa = PBXGroup;
+			children = (
+				22086FC7165BEDF8003AAE61 /* Table */,
+				22086FC9165BEE09003AAE61 /* Detail */,
+			);
+			name = Constituencies;
+			sourceTree = "<group>";
+		};
+		22086FC7165BEDF8003AAE61 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				22086FC3165BEB74003AAE61 /* CMConstViewController.m */,
+				22086FC2165BEB74003AAE61 /* CMConstViewController.h */,
+				22086FC4165BEB74003AAE61 /* CMConstView.xib */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		22086FC8165BEDFD003AAE61 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				22086FBA165BEA8D003AAE61 /* CMMPTableViewController.h */,
+				22086FBB165BEA8D003AAE61 /* CMMPTableViewController.m */,
+				22086FBF165BEB59003AAE61 /* CMMPTableView.xib */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		22086FC9165BEE09003AAE61 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				227E3B0E165BEF0E00F3483C /* CMConstDetailViewController.h */,
+				227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */,
+				227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		22086FCA165BEE0D003AAE61 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				22086FCB165BEE33003AAE61 /* CMMPDetailViewController.h */,
+				22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */,
+				22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 		2248FEAE165BAE7A00723210 = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +637,8 @@
 		2248FFC1165BB46400723210 /* Front end */ = {
 			isa = PBXGroup;
 			children = (
+				22086FC1165BEB5E003AAE61 /* Constituencies */,
+				22086FB9165BEA64003AAE61 /* MPs */,
 				2248FED5165BAE7A00723210 /* CMViewController.h */,
 				2248FED6165BAE7A00723210 /* CMViewController.m */,
 				2248FED8165BAE7A00723210 /* CMViewController_iPhone.xib */,
@@ -714,6 +794,10 @@
 				2248FEDD165BAE7A00723210 /* CMViewController_iPad.xib in Resources */,
 				2248FFAB165BB39300723210 /* test-mps.json in Resources */,
 				22086F9E165BE591003AAE61 /* allMPs.json in Resources */,
+				22086FC0165BEB59003AAE61 /* CMMPTableView.xib in Resources */,
+				22086FC6165BEB74003AAE61 /* CMConstView.xib in Resources */,
+				22086FCF165BEE33003AAE61 /* CMMPDetailView.xib in Resources */,
+				227E3B12165BEF0E00F3483C /* CMConstDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +894,10 @@
 				2248FFEB165BBAFB00723210 /* _Constituency.m in Sources */,
 				2248FFED165BBAFB00723210 /* _MP.m in Sources */,
 				2248FFEF165BBAFB00723210 /* _Party.m in Sources */,
+				22086FBD165BEA8D003AAE61 /* CMMPTableViewController.m in Sources */,
+				22086FC5165BEB74003AAE61 /* CMConstViewController.m in Sources */,
+				22086FCE165BEE33003AAE61 /* CMMPDetailViewController.m in Sources */,
+				227E3B11165BEF0E00F3483C /* CMConstDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,6 +1067,7 @@
 				GCC_PREFIX_HEADER = "TWFY/TWFY-Prefix.pch";
 				INFOPLIST_FILE = "TWFY/TWFY-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -990,6 +1079,7 @@
 				GCC_PREFIX_HEADER = "TWFY/TWFY-Prefix.pch";
 				INFOPLIST_FILE = "TWFY/TWFY-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

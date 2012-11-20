@@ -8,7 +8,9 @@
 
 #import "CMAppDelegate.h"
 
-#import "CMViewController.h"
+#import "CMMPTableViewController.h"
+#import "CMConstViewController.h"
+
 #import "CMParser.h"
 
 @implementation CMAppDelegate
@@ -25,12 +27,28 @@
     CMParser *parser = [[CMParser alloc] init];
     [parser parseInitialAppData];
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    
+/*    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[CMViewController alloc] initWithNibName:@"CMViewController_iPhone" bundle:nil];
     } else {
         self.viewController = [[CMViewController alloc] initWithNibName:@"CMViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    } */
+    
+    CMMPTableViewController *mpTable = [[CMMPTableViewController alloc] initWithNibName:@"CMMPTableView" bundle:nil];
+    UINavigationController *mpNavController = [[UINavigationController alloc] initWithRootViewController:mpTable];
+    [mpNavController setTitle:@"MPs"];
+    
+    CMConstViewController *constTable = [[CMConstViewController alloc] initWithNibName:@"CMConstView" bundle:nil];
+    UINavigationController *constNavController = [[UINavigationController alloc] initWithRootViewController:constTable];
+    [constNavController setTitle:@"Constituencies"];
+    
+    NSArray *tabsArray = [NSArray arrayWithObjects:mpNavController, constNavController, nil];
+    
+    // Instantiate tab bar
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    [tbc setViewControllers:tabsArray];
+    
+    self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
     return YES;
 }
