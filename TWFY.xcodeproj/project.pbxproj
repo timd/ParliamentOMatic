@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2248FFCA165BB6D400723210 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2248FFCB165BB6D400723210 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				2248FFCE165BB6DB00723210 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2248FEBE165BAE7A00723210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBD165BAE7A00723210 /* UIKit.framework */; };
 		2248FEC0165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
@@ -99,8 +113,6 @@
 		2248FF9E165BB25200723210 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF8C165BB25200723210 /* UIImageView+AFNetworking.m */; };
 		2248FFA0165BB26B00723210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FF9F165BB26B00723210 /* SystemConfiguration.framework */; };
 		2248FFA1165BB27000723210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FF9F165BB26B00723210 /* SystemConfiguration.framework */; };
-		2248FFA3165BB36600723210 /* TWFY.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA2165BB36600723210 /* TWFY.xcdatamodel */; };
-		2248FFA4165BB36600723210 /* TWFY.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA2165BB36600723210 /* TWFY.xcdatamodel */; };
 		2248FFA7165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
 		2248FFA8165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
 		2248FFAB165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
@@ -108,6 +120,20 @@
 		2248FFBD165BB3F900723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
 		2248FFBE165BB3F900723210 /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBB165BB3F900723210 /* ParserTests.m */; };
 		2248FFBF165BB3F900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
+		2248FFD5165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
+		2248FFD6165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
+		2248FFDF165BBAF200723210 /* Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDA165BBAF200723210 /* Constituency.m */; };
+		2248FFE0165BBAF200723210 /* Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDA165BBAF200723210 /* Constituency.m */; };
+		2248FFE1165BBAF200723210 /* MP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDC165BBAF200723210 /* MP.m */; };
+		2248FFE2165BBAF200723210 /* MP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDC165BBAF200723210 /* MP.m */; };
+		2248FFE3165BBAF200723210 /* Party.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDE165BBAF200723210 /* Party.m */; };
+		2248FFE4165BBAF200723210 /* Party.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDE165BBAF200723210 /* Party.m */; };
+		2248FFEB165BBAFB00723210 /* _Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFE6165BBAFB00723210 /* _Constituency.m */; };
+		2248FFEC165BBAFB00723210 /* _Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFE6165BBAFB00723210 /* _Constituency.m */; };
+		2248FFED165BBAFB00723210 /* _MP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFE8165BBAFB00723210 /* _MP.m */; };
+		2248FFEE165BBAFB00723210 /* _MP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFE8165BBAFB00723210 /* _MP.m */; };
+		2248FFEF165BBAFB00723210 /* _Party.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFEA165BBAFB00723210 /* _Party.m */; };
+		2248FFF0165BBAFB00723210 /* _Party.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFEA165BBAFB00723210 /* _Party.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +143,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2248FEB8165BAE7A00723210;
 			remoteInfo = TWFY;
+		};
+		2248FFD1165BB73900723210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2248FEB0165BAE7A00723210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2248FFCA165BB6D400723210;
+			remoteInfo = Mogenerator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -219,13 +252,25 @@
 		2248FF8B165BB25200723210 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		2248FF8C165BB25200723210 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		2248FF9F165BB26B00723210 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2248FFA2165BB36600723210 /* TWFY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TWFY.xcdatamodel; sourceTree = "<group>"; };
 		2248FFA5165BB38800723210 /* CMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMParser.h; sourceTree = "<group>"; };
 		2248FFA6165BB38800723210 /* CMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMParser.m; sourceTree = "<group>"; };
 		2248FFAA165BB39300723210 /* mps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mps.json; sourceTree = "<group>"; };
 		2248FFBA165BB3F900723210 /* MPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTests.m; sourceTree = "<group>"; };
 		2248FFBB165BB3F900723210 /* ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTests.m; sourceTree = "<group>"; };
 		2248FFBC165BB3F900723210 /* PartyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyTests.m; sourceTree = "<group>"; };
+		2248FFD4165BB7A800723210 /* TWFY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TWFY.xcdatamodel; sourceTree = "<group>"; };
+		2248FFD9165BBAF200723210 /* Constituency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constituency.h; sourceTree = "<group>"; };
+		2248FFDA165BBAF200723210 /* Constituency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constituency.m; sourceTree = "<group>"; };
+		2248FFDB165BBAF200723210 /* MP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP.h; sourceTree = "<group>"; };
+		2248FFDC165BBAF200723210 /* MP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP.m; sourceTree = "<group>"; };
+		2248FFDD165BBAF200723210 /* Party.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Party.h; sourceTree = "<group>"; };
+		2248FFDE165BBAF200723210 /* Party.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Party.m; sourceTree = "<group>"; };
+		2248FFE5165BBAFB00723210 /* _Constituency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Constituency.h; sourceTree = "<group>"; };
+		2248FFE6165BBAFB00723210 /* _Constituency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Constituency.m; sourceTree = "<group>"; };
+		2248FFE7165BBAFB00723210 /* _MP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MP.h; sourceTree = "<group>"; };
+		2248FFE8165BBAFB00723210 /* _MP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MP.m; sourceTree = "<group>"; };
+		2248FFE9165BBAFB00723210 /* _Party.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Party.h; sourceTree = "<group>"; };
+		2248FFEA165BBAFB00723210 /* _Party.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Party.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,10 +548,10 @@
 		2248FFC0165BB45300723210 /* Back end */ = {
 			isa = PBXGroup;
 			children = (
+				2248FFC7165BB6AD00723210 /* CoreData */,
 				2248FFA9165BB39300723210 /* Data */,
 				2248FFA5165BB38800723210 /* CMParser.h */,
 				2248FFA6165BB38800723210 /* CMParser.m */,
-				2248FFA2165BB36600723210 /* TWFY.xcdatamodel */,
 			);
 			name = "Back end";
 			sourceTree = "<group>";
@@ -520,6 +565,42 @@
 				2248FEDB165BAE7A00723210 /* CMViewController_iPad.xib */,
 			);
 			name = "Front end";
+			sourceTree = "<group>";
+		};
+		2248FFC7165BB6AD00723210 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFD7165BBAD000723210 /* HumanFiles */,
+				2248FFD8165BBAD000723210 /* MachineFiles */,
+				2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2248FFD7165BBAD000723210 /* HumanFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFD9165BBAF200723210 /* Constituency.h */,
+				2248FFDA165BBAF200723210 /* Constituency.m */,
+				2248FFDB165BBAF200723210 /* MP.h */,
+				2248FFDC165BBAF200723210 /* MP.m */,
+				2248FFDD165BBAF200723210 /* Party.h */,
+				2248FFDE165BBAF200723210 /* Party.m */,
+			);
+			path = HumanFiles;
+			sourceTree = "<group>";
+		};
+		2248FFD8165BBAD000723210 /* MachineFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFE5165BBAFB00723210 /* _Constituency.h */,
+				2248FFE6165BBAFB00723210 /* _Constituency.m */,
+				2248FFE7165BBAFB00723210 /* _MP.h */,
+				2248FFE8165BBAFB00723210 /* _MP.m */,
+				2248FFE9165BBAFB00723210 /* _Party.h */,
+				2248FFEA165BBAFB00723210 /* _Party.m */,
+			);
+			path = MachineFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +617,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2248FFD2165BB73900723210 /* PBXTargetDependency */,
 			);
 			name = TWFY;
 			productName = TWFY;
@@ -585,6 +667,7 @@
 			targets = (
 				2248FEB8165BAE7A00723210 /* TWFY */,
 				2248FEE2165BAE7A00723210 /* TWFYTests */,
+				2248FFCA165BB6D400723210 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -628,6 +711,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		2248FFCE165BB6DB00723210 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$(SOURCE_ROOT)mogenerator -m TWFY/CoreData/TWFY.xcdatamodeld/TWFY.xcdatamodel -M TWFY/CoreData/MachineFiles/  -H TWFY/CoreData/HumanFiles --template-var arc=true";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -674,8 +770,14 @@
 				2248FF99165BB25200723210 /* AFURLConnectionOperation.m in Sources */,
 				2248FF9B165BB25200723210 /* AFXMLRequestOperation.m in Sources */,
 				2248FF9D165BB25200723210 /* UIImageView+AFNetworking.m in Sources */,
-				2248FFA3165BB36600723210 /* TWFY.xcdatamodel in Sources */,
 				2248FFA7165BB38800723210 /* CMParser.m in Sources */,
+				2248FFD5165BB7A800723210 /* TWFY.xcdatamodeld in Sources */,
+				2248FFDF165BBAF200723210 /* Constituency.m in Sources */,
+				2248FFE1165BBAF200723210 /* MP.m in Sources */,
+				2248FFE3165BBAF200723210 /* Party.m in Sources */,
+				2248FFEB165BBAFB00723210 /* _Constituency.m in Sources */,
+				2248FFED165BBAFB00723210 /* _MP.m in Sources */,
+				2248FFEF165BBAFB00723210 /* _Party.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,11 +821,17 @@
 				2248FF9A165BB25200723210 /* AFURLConnectionOperation.m in Sources */,
 				2248FF9C165BB25200723210 /* AFXMLRequestOperation.m in Sources */,
 				2248FF9E165BB25200723210 /* UIImageView+AFNetworking.m in Sources */,
-				2248FFA4165BB36600723210 /* TWFY.xcdatamodel in Sources */,
 				2248FFA8165BB38800723210 /* CMParser.m in Sources */,
 				2248FFBD165BB3F900723210 /* MPTests.m in Sources */,
 				2248FFBE165BB3F900723210 /* ParserTests.m in Sources */,
 				2248FFBF165BB3F900723210 /* PartyTests.m in Sources */,
+				2248FFD6165BB7A800723210 /* TWFY.xcdatamodeld in Sources */,
+				2248FFE0165BBAF200723210 /* Constituency.m in Sources */,
+				2248FFE2165BBAF200723210 /* MP.m in Sources */,
+				2248FFE4165BBAF200723210 /* Party.m in Sources */,
+				2248FFEC165BBAFB00723210 /* _Constituency.m in Sources */,
+				2248FFEE165BBAFB00723210 /* _MP.m in Sources */,
+				2248FFF0165BBAFB00723210 /* _Party.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +842,11 @@
 			isa = PBXTargetDependency;
 			target = 2248FEB8165BAE7A00723210 /* TWFY */;
 			targetProxy = 2248FEE8165BAE7A00723210 /* PBXContainerItemProxy */;
+		};
+		2248FFD2165BB73900723210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2248FFCA165BB6D400723210 /* Mogenerator */;
+			targetProxy = 2248FFD1165BB73900723210 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -885,6 +998,20 @@
 			};
 			name = Release;
 		};
+		2248FFCC165BB6D400723210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2248FFCD165BB6D400723210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -913,7 +1040,28 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
+		2248FFCB165BB6D400723210 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2248FFCC165BB6D400723210 /* Debug */,
+				2248FFCD165BB6D400723210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2248FFD4165BB7A800723210 /* TWFY.xcdatamodel */,
+			);
+			currentVersion = 2248FFD4165BB7A800723210 /* TWFY.xcdatamodel */;
+			path = TWFY.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2248FEB0165BAE7A00723210 /* Project object */;
 }

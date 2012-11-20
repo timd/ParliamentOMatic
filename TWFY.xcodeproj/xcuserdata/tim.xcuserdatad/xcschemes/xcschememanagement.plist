@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mogenerator.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>TWFY.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>2248FEE2165BAE7A00723210</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2248FFC2165BB51C00723210</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2248FFCA165BB6D400723210</key>
 		<dict>
 			<key>primary</key>
 			<true/>
