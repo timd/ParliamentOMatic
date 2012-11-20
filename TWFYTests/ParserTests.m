@@ -113,7 +113,7 @@ describe(@"The JSON Parser", ^{
         });
         
     });
-
+    
     afterEach(^{
         [MagicalRecord cleanUp];
     });

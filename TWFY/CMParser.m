@@ -14,16 +14,29 @@
 
 @implementation CMParser
 
+-(void)parseInitialAppData {
+
+    [self parseMpDataWithJson:@"allMPs"];
+
+}
+
 -(void)parseMpDataWithJson:(NSString *)jsonFileName {
     
     // Load file
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSString *path = [bundle pathForResource:jsonFileName ofType:@"json"];
-    NSData *fileData = [NSData dataWithContentsOfFile:path];
+
+    NSError *error = nil;
+    NSString *dataString = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
+    NSData *fileData = [dataString dataUsingEncoding:NSUTF8StringEncoding];
     
     // Parse file into dictionary
-    NSError *error = nil;
     NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&error];
+    
+    if (error) {
+        NSLog(@"Error: %@", error);
+        return;
+    }
     
     // Process dictionary
 
