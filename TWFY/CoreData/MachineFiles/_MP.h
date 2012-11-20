@@ -42,9 +42,9 @@ extern const struct MPFetchedProperties {
 
 
 
-@property int16_t member_idValue;
-- (int16_t)member_idValue;
-- (void)setMember_idValue:(int16_t)value_;
+@property int32_t member_idValue;
+- (int32_t)member_idValue;
+- (void)setMember_idValue:(int32_t)value_;
 
 //- (BOOL)validateMember_id:(id*)value_ error:(NSError**)error_;
 
@@ -66,9 +66,9 @@ extern const struct MPFetchedProperties {
 
 
 
-@property int16_t person_idValue;
-- (int16_t)person_idValue;
-- (void)setPerson_idValue:(int16_t)value_;
+@property int32_t person_idValue;
+- (int32_t)person_idValue;
+- (void)setPerson_idValue:(int32_t)value_;
 
 //- (BOOL)validatePerson_id:(id*)value_ error:(NSError**)error_;
 
@@ -103,8 +103,8 @@ extern const struct MPFetchedProperties {
 - (NSNumber*)primitiveMember_id;
 - (void)setPrimitiveMember_id:(NSNumber*)value;
 
-- (int16_t)primitiveMember_idValue;
-- (void)setPrimitiveMember_idValue:(int16_t)value_;
+- (int32_t)primitiveMember_idValue;
+- (void)setPrimitiveMember_idValue:(int32_t)value_;
 
 
 
@@ -118,8 +118,8 @@ extern const struct MPFetchedProperties {
 - (NSNumber*)primitivePerson_id;
 - (void)setPrimitivePerson_id:(NSNumber*)value;
 
-- (int16_t)primitivePerson_idValue;
-- (void)setPrimitivePerson_idValue:(int16_t)value_;
+- (int32_t)primitivePerson_idValue;
+- (void)setPrimitivePerson_idValue:(int32_t)value_;
 
 
 

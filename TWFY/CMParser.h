@@ -11,5 +11,6 @@
 @interface CMParser : NSObject
 
 -(void)parseMpDataWithJson:(NSString *)jsonFileName;
+-(void)updateDataWithJson:(NSString *)jsonFileName;
 
 @end

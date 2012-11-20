@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		22086F93165BD3BE003AAE61 /* test-update.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F92165BD3BE003AAE61 /* test-update.json */; };
+		22086F96165BD803003AAE61 /* UpdateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086F95165BD803003AAE61 /* UpdateTests.m */; };
 		2248FEBE165BAE7A00723210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBD165BAE7A00723210 /* UIKit.framework */; };
 		2248FEC0165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
 		2248FEC2165BAE7A00723210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEC1165BAE7A00723210 /* CoreGraphics.framework */; };
@@ -155,6 +157,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22086F92165BD3BE003AAE61 /* test-update.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-update.json"; sourceTree = "<group>"; };
+		22086F95165BD803003AAE61 /* UpdateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateTests.m; sourceTree = "<group>"; };
 		2248FEB9165BAE7A00723210 /* TWFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248FEBD165BAE7A00723210 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2248FEBF165BAE7A00723210 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -542,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				2248FFAA165BB39300723210 /* test-mps.json */,
+				22086F92165BD3BE003AAE61 /* test-update.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 			isa = PBXGroup;
 			children = (
 				2248FFBB165BB3F900723210 /* ParserTests.m */,
+				22086F95165BD803003AAE61 /* UpdateTests.m */,
 			);
 			name = "Parser tests";
 			sourceTree = "<group>";
@@ -720,6 +726,7 @@
 			files = (
 				2248FEEF165BAE7A00723210 /* InfoPlist.strings in Resources */,
 				2248FFAC165BB39300723210 /* test-mps.json in Resources */,
+				22086F93165BD3BE003AAE61 /* test-update.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,6 +867,7 @@
 				2248FFEE165BBAFB00723210 /* _MP.m in Sources */,
 				2248FFF0165BBAFB00723210 /* _Party.m in Sources */,
 				2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */,
+				22086F96165BD803003AAE61 /* UpdateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

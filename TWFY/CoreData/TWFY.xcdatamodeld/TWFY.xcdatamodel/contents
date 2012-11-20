@@ -5,9 +5,9 @@
         <relationship name="mp" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MP" inverseName="constituency" inverseEntity="MP" syncable="YES"/>
     </entity>
     <entity name="MP" representedClassName="MP" syncable="YES">
-        <attribute name="member_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="member_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="person_id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="person_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="constituency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Constituency" inverseName="mp" inverseEntity="Constituency" syncable="YES"/>
         <relationship name="party" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="mps" inverseEntity="Party" syncable="YES"/>
     </entity>
@@ -17,7 +17,7 @@
     </entity>
     <elements>
         <element name="Constituency" positionX="205" positionY="228" width="128" height="73"/>
-        <element name="MP" positionX="108" positionY="54" width="128" height="118"/>
+        <element name="MP" positionX="108" positionY="54" width="128" height="120"/>
         <element name="Party" positionX="-243" positionY="45" width="128" height="73"/>
     </elements>
 </model>
