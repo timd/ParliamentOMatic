@@ -7,6 +7,7 @@
 //
 
 #import "CMViewController.h"
+#import "MP.h"
 
 @interface CMViewController ()
 
@@ -18,6 +19,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    MP *mp = [MP createEntity];
+    [mp setName:@"James Foo"];
+    NSLog(@"mp = %@", mp);
+    
 }
 
 - (void)didReceiveMemoryWarning

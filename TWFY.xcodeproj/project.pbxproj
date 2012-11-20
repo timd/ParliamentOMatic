@@ -117,9 +117,6 @@
 		2248FFA8165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
 		2248FFAB165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
 		2248FFAC165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
-		2248FFBD165BB3F900723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
-		2248FFBE165BB3F900723210 /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBB165BB3F900723210 /* ParserTests.m */; };
-		2248FFBF165BB3F900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
 		2248FFD5165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
 		2248FFD6165BB7A800723210 /* TWFY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFD3165BB7A800723210 /* TWFY.xcdatamodeld */; };
 		2248FFDF165BBAF200723210 /* Constituency.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFDA165BBAF200723210 /* Constituency.m */; };
@@ -134,6 +131,9 @@
 		2248FFEE165BBAFB00723210 /* _MP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFE8165BBAFB00723210 /* _MP.m */; };
 		2248FFEF165BBAFB00723210 /* _Party.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFEA165BBAFB00723210 /* _Party.m */; };
 		2248FFF0165BBAFB00723210 /* _Party.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFEA165BBAFB00723210 /* _Party.m */; };
+		2248FFF2165BBD5900723210 /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBB165BB3F900723210 /* ParserTests.m */; };
+		2248FFF3165BBD5900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
+		2248FFF4165BBEE400723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -785,6 +785,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2248FFF4165BBEE400723210 /* MPTests.m in Sources */,
+				2248FFF2165BBD5900723210 /* ParserTests.m in Sources */,
+				2248FFF3165BBD5900723210 /* PartyTests.m in Sources */,
 				2248FF03165BB01700723210 /* KiwiTest.m in Sources */,
 				2248FF43165BB11F00723210 /* MagicalImportFunctions.m in Sources */,
 				2248FF45165BB11F00723210 /* NSAttributeDescription+MagicalDataImport.m in Sources */,
@@ -822,9 +825,6 @@
 				2248FF9C165BB25200723210 /* AFXMLRequestOperation.m in Sources */,
 				2248FF9E165BB25200723210 /* UIImageView+AFNetworking.m in Sources */,
 				2248FFA8165BB38800723210 /* CMParser.m in Sources */,
-				2248FFBD165BB3F900723210 /* MPTests.m in Sources */,
-				2248FFBE165BB3F900723210 /* ParserTests.m in Sources */,
-				2248FFBF165BB3F900723210 /* PartyTests.m in Sources */,
 				2248FFD6165BB7A800723210 /* TWFY.xcdatamodeld in Sources */,
 				2248FFE0165BBAF200723210 /* Constituency.m in Sources */,
 				2248FFE2165BBAF200723210 /* MP.m in Sources */,
@@ -963,7 +963,6 @@
 		2248FEF9165BAE7A00723210 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TWFY.app/TWFY";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -982,7 +981,6 @@
 		2248FEFA165BAE7A00723210 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TWFY.app/TWFY";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",

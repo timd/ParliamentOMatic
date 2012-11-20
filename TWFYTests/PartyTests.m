@@ -10,7 +10,7 @@
 #import "CMParser.h"
 #import "Party.h"
 
-SPEC_BEGIN(MPTests)
+SPEC_BEGIN(PartyTests)
 
 describe(@"The Party object", ^{
     
