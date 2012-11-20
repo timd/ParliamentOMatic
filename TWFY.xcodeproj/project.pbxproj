@@ -551,10 +551,9 @@
 		2248FFC0165BB45300723210 /* Back end */ = {
 			isa = PBXGroup;
 			children = (
+				2248FFF8165BC59100723210 /* Parser */,
 				2248FFC7165BB6AD00723210 /* CoreData */,
 				2248FFA9165BB39300723210 /* Data */,
-				2248FFA5165BB38800723210 /* CMParser.h */,
-				2248FFA6165BB38800723210 /* CMParser.m */,
 			);
 			name = "Back end";
 			sourceTree = "<group>";
@@ -604,6 +603,15 @@
 				2248FFEA165BBAFB00723210 /* _Party.m */,
 			);
 			path = MachineFiles;
+			sourceTree = "<group>";
+		};
+		2248FFF8165BC59100723210 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFA5165BB38800723210 /* CMParser.h */,
+				2248FFA6165BB38800723210 /* CMParser.m */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
