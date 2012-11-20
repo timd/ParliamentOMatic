@@ -99,6 +99,15 @@
 		2248FF9E165BB25200723210 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FF8C165BB25200723210 /* UIImageView+AFNetworking.m */; };
 		2248FFA0165BB26B00723210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FF9F165BB26B00723210 /* SystemConfiguration.framework */; };
 		2248FFA1165BB27000723210 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FF9F165BB26B00723210 /* SystemConfiguration.framework */; };
+		2248FFA3165BB36600723210 /* TWFY.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA2165BB36600723210 /* TWFY.xcdatamodel */; };
+		2248FFA4165BB36600723210 /* TWFY.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA2165BB36600723210 /* TWFY.xcdatamodel */; };
+		2248FFA7165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
+		2248FFA8165BB38800723210 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFA6165BB38800723210 /* CMParser.m */; };
+		2248FFAB165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
+		2248FFAC165BB39300723210 /* mps.json in Resources */ = {isa = PBXBuildFile; fileRef = 2248FFAA165BB39300723210 /* mps.json */; };
+		2248FFBD165BB3F900723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
+		2248FFBE165BB3F900723210 /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBB165BB3F900723210 /* ParserTests.m */; };
+		2248FFBF165BB3F900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +219,13 @@
 		2248FF8B165BB25200723210 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		2248FF8C165BB25200723210 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		2248FF9F165BB26B00723210 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2248FFA2165BB36600723210 /* TWFY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TWFY.xcdatamodel; sourceTree = "<group>"; };
+		2248FFA5165BB38800723210 /* CMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMParser.h; sourceTree = "<group>"; };
+		2248FFA6165BB38800723210 /* CMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMParser.m; sourceTree = "<group>"; };
+		2248FFAA165BB39300723210 /* mps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mps.json; sourceTree = "<group>"; };
+		2248FFBA165BB3F900723210 /* MPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTests.m; sourceTree = "<group>"; };
+		2248FFBB165BB3F900723210 /* ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTests.m; sourceTree = "<group>"; };
+		2248FFBC165BB3F900723210 /* PartyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,10 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				2248FF04165BB0E300723210 /* App delegate */,
-				2248FED5165BAE7A00723210 /* CMViewController.h */,
-				2248FED6165BAE7A00723210 /* CMViewController.m */,
-				2248FED8165BAE7A00723210 /* CMViewController_iPhone.xib */,
-				2248FEDB165BAE7A00723210 /* CMViewController_iPad.xib */,
+				2248FFC1165BB46400723210 /* Front end */,
+				2248FFC0165BB45300723210 /* Back end */,
 				2248FEC4165BAE7A00723210 /* Supporting Files */,
 			);
 			path = TWFY;
@@ -305,6 +319,9 @@
 		2248FEEA165BAE7A00723210 /* TWFYTests */ = {
 			isa = PBXGroup;
 			children = (
+				2248FFBA165BB3F900723210 /* MPTests.m */,
+				2248FFBB165BB3F900723210 /* ParserTests.m */,
+				2248FFBC165BB3F900723210 /* PartyTests.m */,
 				2248FF00165BB00600723210 /* Kiwi Tests */,
 				2248FEEB165BAE7A00723210 /* Supporting Files */,
 			);
@@ -475,6 +492,36 @@
 			path = Frameworks/AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
+		2248FFA9165BB39300723210 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFAA165BB39300723210 /* mps.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2248FFC0165BB45300723210 /* Back end */ = {
+			isa = PBXGroup;
+			children = (
+				2248FFA9165BB39300723210 /* Data */,
+				2248FFA5165BB38800723210 /* CMParser.h */,
+				2248FFA6165BB38800723210 /* CMParser.m */,
+				2248FFA2165BB36600723210 /* TWFY.xcdatamodel */,
+			);
+			name = "Back end";
+			sourceTree = "<group>";
+		};
+		2248FFC1165BB46400723210 /* Front end */ = {
+			isa = PBXGroup;
+			children = (
+				2248FED5165BAE7A00723210 /* CMViewController.h */,
+				2248FED6165BAE7A00723210 /* CMViewController.m */,
+				2248FED8165BAE7A00723210 /* CMViewController_iPhone.xib */,
+				2248FEDB165BAE7A00723210 /* CMViewController_iPad.xib */,
+			);
+			name = "Front end";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,6 +600,7 @@
 				2248FED4165BAE7A00723210 /* Default-568h@2x.png in Resources */,
 				2248FEDA165BAE7A00723210 /* CMViewController_iPhone.xib in Resources */,
 				2248FEDD165BAE7A00723210 /* CMViewController_iPad.xib in Resources */,
+				2248FFAB165BB39300723210 /* mps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2248FEEF165BAE7A00723210 /* InfoPlist.strings in Resources */,
+				2248FFAC165BB39300723210 /* mps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +674,8 @@
 				2248FF99165BB25200723210 /* AFURLConnectionOperation.m in Sources */,
 				2248FF9B165BB25200723210 /* AFXMLRequestOperation.m in Sources */,
 				2248FF9D165BB25200723210 /* UIImageView+AFNetworking.m in Sources */,
+				2248FFA3165BB36600723210 /* TWFY.xcdatamodel in Sources */,
+				2248FFA7165BB38800723210 /* CMParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +719,11 @@
 				2248FF9A165BB25200723210 /* AFURLConnectionOperation.m in Sources */,
 				2248FF9C165BB25200723210 /* AFXMLRequestOperation.m in Sources */,
 				2248FF9E165BB25200723210 /* UIImageView+AFNetworking.m in Sources */,
+				2248FFA4165BB36600723210 /* TWFY.xcdatamodel in Sources */,
+				2248FFA8165BB38800723210 /* CMParser.m in Sources */,
+				2248FFBD165BB3F900723210 /* MPTests.m in Sources */,
+				2248FFBE165BB3F900723210 /* ParserTests.m in Sources */,
+				2248FFBF165BB3F900723210 /* PartyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
