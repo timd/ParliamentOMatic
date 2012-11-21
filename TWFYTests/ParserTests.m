@@ -54,6 +54,21 @@ describe(@"The JSON Parser", ^{
             [[theValue([mpsArray count]) should] equal:theValue(1)];
         });
         
+        it(@"should create an MP with the first name 'Person' and the second name 'One'", ^{
+            NSArray *mpsArray = [MP findByAttribute:@"lastname" withValue:@"One"];
+            [[theValue([mpsArray count]) should] equal:theValue(1)];
+        });
+
+        it(@"should create an MP with the first name 'Angela' and the second name 'Double Barrelled'", ^{
+            NSArray *mpsArray = [MP findByAttribute:@"lastname" withValue:@"Double Barrelled"];
+            [[theValue([mpsArray count]) should] equal:theValue(1)];
+        });
+
+        it(@"should create an MP with the first name 'Nigel' and the second name 'Fotherington-Thomas'", ^{
+            NSArray *mpsArray = [MP findByAttribute:@"lastname" withValue:@"Fotherington-Thomas"];
+            [[theValue([mpsArray count]) should] equal:theValue(1)];
+        });
+
         it(@"should create an MP with the member id 40323", ^{
             NSArray *mpsArray = [MP findByAttribute:@"member_id" withValue:[NSNumber numberWithInt:40323]];
             [[theValue([mpsArray count]) should] equal:theValue(1)];

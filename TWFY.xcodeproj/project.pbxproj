@@ -145,6 +145,9 @@
 		2248FFF3165BBD5900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
 		2248FFF4165BBEE400723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
 		2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFF6165BC32700723210 /* ConstituencyTests.m */; };
+		227E29A1165D2D83002FF81E /* MPTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E29A0165D2D83002FF81E /* MPTableTests.m */; };
+		227E29A2165D2E77002FF81E /* CMMPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FBB165BEA8D003AAE61 /* CMMPTableViewController.m */; };
+		227E29A3165D2E8A002FF81E /* CMMPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */; };
 		227E3B11165BEF0E00F3483C /* CMConstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */; };
 		227E3B12165BEF0E00F3483C /* CMConstDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */; };
 /* End PBXBuildFile section */
@@ -297,6 +300,7 @@
 		2248FFE9165BBAFB00723210 /* _Party.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Party.h; sourceTree = "<group>"; };
 		2248FFEA165BBAFB00723210 /* _Party.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Party.m; sourceTree = "<group>"; };
 		2248FFF6165BC32700723210 /* ConstituencyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstituencyTests.m; sourceTree = "<group>"; };
+		227E29A0165D2D83002FF81E /* MPTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTableTests.m; sourceTree = "<group>"; };
 		227E3B0E165BEF0E00F3483C /* CMConstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstDetailViewController.h; sourceTree = "<group>"; };
 		227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConstDetailViewController.m; sourceTree = "<group>"; };
 		227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstDetailView.xib; sourceTree = "<group>"; };
@@ -451,6 +455,7 @@
 		2248FEEA165BAE7A00723210 /* TWFYTests */ = {
 			isa = PBXGroup;
 			children = (
+				227E299D165D2D6E002FF81E /* View controller tests */,
 				2248FFFA165BC5CF00723210 /* Parser tests */,
 				2248FFF9165BC5C200723210 /* Object tests */,
 				2248FEEB165BAE7A00723210 /* Supporting Files */,
@@ -712,6 +717,14 @@
 			name = "Parser tests";
 			sourceTree = "<group>";
 		};
+		227E299D165D2D6E002FF81E /* View controller tests */ = {
+			isa = PBXGroup;
+			children = (
+				227E29A0165D2D83002FF81E /* MPTableTests.m */,
+			);
+			name = "View controller tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -905,6 +918,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227E29A2165D2E77002FF81E /* CMMPTableViewController.m in Sources */,
 				2248FFF4165BBEE400723210 /* MPTests.m in Sources */,
 				2248FFF2165BBD5900723210 /* ParserTests.m in Sources */,
 				2248FFF3165BBD5900723210 /* PartyTests.m in Sources */,
@@ -914,6 +928,7 @@
 				2248FF49165BB11F00723210 /* NSNumber+MagicalDataImport.m in Sources */,
 				2248FF4B165BB11F00723210 /* NSObject+MagicalDataImport.m in Sources */,
 				2248FF4D165BB11F00723210 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
+				227E29A3165D2E8A002FF81E /* CMMPDetailViewController.m in Sources */,
 				2248FF4F165BB11F00723210 /* NSString+MagicalDataImport.m in Sources */,
 				2248FF51165BB11F00723210 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				2248FF53165BB11F00723210 /* NSManagedObject+MagicalDataImport.m in Sources */,
@@ -954,6 +969,7 @@
 				2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */,
 				22086F96165BD803003AAE61 /* UpdateTests.m in Sources */,
 				22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */,
+				227E29A1165D2D83002FF81E /* MPTableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,6 @@
 
 @interface CMMPTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *mpsArray;
+
 @end

@@ -29,7 +29,7 @@
       buildConfiguration = "Debug">
       <Testables>
          <TestableReference
-            skipped = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2248FEE2165BAE7A00723210"
@@ -37,6 +37,17 @@
                BlueprintName = "TWFYTests"
                ReferencedContainer = "container:TWFY.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ConstituencyTests">
+               </Test>
+               <Test
+                  Identifier = "MPTests">
+               </Test>
+               <Test
+                  Identifier = "PartyTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

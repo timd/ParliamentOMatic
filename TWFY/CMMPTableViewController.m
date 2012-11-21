@@ -13,8 +13,6 @@
 
 @interface CMMPTableViewController ()
 
-@property (nonatomic, strong) NSArray *mpsArray;
-
 @end
 
 @implementation CMMPTableViewController
@@ -39,7 +37,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.title = @"MPs";
-    self.mpsArray = [MP findAllSortedBy:@"name" ascending:YES];
+    self.mpsArray = [MP findAllSortedBy:@"lastname" ascending:YES];
     
 }
 
