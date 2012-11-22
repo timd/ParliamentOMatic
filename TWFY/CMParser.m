@@ -47,6 +47,22 @@
         MP *newMP = [MP createEntity];
         [newMP setName:name];
         
+        // Set first and last names
+        NSArray *splitNames = [name componentsSeparatedByString:@" "];
+        [newMP setFirstname:[splitNames objectAtIndex:0]];
+        
+        NSMutableString *lastNames = [[NSMutableString alloc] init];
+        for (int i = 1; i < [splitNames count]; i++) {
+            [lastNames appendString:[splitNames objectAtIndex:i]];
+            
+            if (i < ([splitNames count] - 1)) {
+                [lastNames appendString:@" "];
+            }
+        }
+        
+        [newMP setLastname:lastNames];
+        
+        
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         [formatter setNumberStyle:NSNumberFormatterNoStyle];
         
@@ -69,6 +85,14 @@
             Party *newParty = [Party createEntity];
             [newParty setName:partyName];
             [newMP setParty:newParty];
+            
+            // Create party shortName
+            NSArray *explodedName = [partyName componentsSeparatedByString:@" "];
+            NSMutableString *shortName = [[NSMutableString alloc] init];
+            for (NSString *component in explodedName) {
+                [shortName appendString:component];
+            }
+            [newParty setShortName:shortName];
         }
 
         //*** Handle constituency ***//

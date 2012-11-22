@@ -1,5 +1,5 @@
 //
-//  CMViewController.h
+//  CMConstViewController.h
 //  TWFY
 //
 //  Created by Tim on 20/11/2012.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMViewController : UIViewController
+@interface CMConstViewController : UITableViewController
 
 @end

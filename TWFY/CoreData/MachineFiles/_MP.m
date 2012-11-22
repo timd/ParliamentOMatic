@@ -4,6 +4,8 @@
 #import "_MP.h"
 
 const struct MPAttributes MPAttributes = {
+	.firstname = @"firstname",
+	.lastname = @"lastname",
 	.member_id = @"member_id",
 	.name = @"name",
 	.person_id = @"person_id",
@@ -56,6 +58,20 @@ const struct MPFetchedProperties MPFetchedProperties = {
 
 	return keyPaths;
 }
+
+
+
+
+@dynamic firstname;
+
+
+
+
+
+
+@dynamic lastname;
+
+
 
 
 

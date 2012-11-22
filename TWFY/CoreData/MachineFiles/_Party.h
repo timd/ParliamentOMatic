@@ -6,6 +6,7 @@
 
 extern const struct PartyAttributes {
 	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *shortName;
 } PartyAttributes;
 
 extern const struct PartyRelationships {
@@ -16,6 +17,7 @@ extern const struct PartyFetchedProperties {
 } PartyFetchedProperties;
 
 @class MP;
+
 
 
 
@@ -37,6 +39,16 @@ extern const struct PartyFetchedProperties {
 
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* shortName;
+
+
+
+//- (BOOL)validateShortName:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -66,6 +78,12 @@ extern const struct PartyFetchedProperties {
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveShortName;
+- (void)setPrimitiveShortName:(NSString*)value;
 
 
 

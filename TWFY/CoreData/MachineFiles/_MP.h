@@ -5,6 +5,8 @@
 
 
 extern const struct MPAttributes {
+	__unsafe_unretained NSString *firstname;
+	__unsafe_unretained NSString *lastname;
 	__unsafe_unretained NSString *member_id;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *person_id;
@@ -25,6 +27,8 @@ extern const struct MPFetchedProperties {
 
 
 
+
+
 @interface MPID : NSManagedObjectID {}
 @end
 
@@ -33,6 +37,26 @@ extern const struct MPFetchedProperties {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (MPID*)objectID;
+
+
+
+
+
+@property (nonatomic, strong) NSString* firstname;
+
+
+
+//- (BOOL)validateFirstname:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* lastname;
+
+
+
+//- (BOOL)validateLastname:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -98,6 +122,18 @@ extern const struct MPFetchedProperties {
 @end
 
 @interface _MP (CoreDataGeneratedPrimitiveAccessors)
+
+
+- (NSString*)primitiveFirstname;
+- (void)setPrimitiveFirstname:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveLastname;
+- (void)setPrimitiveLastname:(NSString*)value;
+
+
 
 
 - (NSNumber*)primitiveMember_id;
