@@ -8,8 +8,12 @@
 
 #import "CMMPTableViewController.h"
 #import "CMMPDetailViewController.h"
+#import "CMMPTableCell.h"
 
+#import "Party.h"
 #import "MP.h"
+
+#define kToryCell @"ToryCell"
 
 @interface CMMPTableViewController ()
 
@@ -35,6 +39,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"CMMPTableCell" bundle:nil] forCellReuseIdentifier:kToryCell];
     
     self.title = @"MPs";
     self.mpsArray = [MP findAllSortedBy:@"lastname" ascending:YES];
@@ -63,17 +69,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kToryCell];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CMMPTableCell" owner:self options:nil];
+        cell = (UITableViewCell *)[nibs objectAtIndex:0];
     }
     
     // Configure the cell...
     MP *theMP = [self.mpsArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = [theMP name];
+    
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:2000];
+    [nameLabel setText:[theMP name]];
+    
+    UIView *partyLogoView = [cell viewWithTag:1000];
+
+    for (UIView *subView in [partyLogoView subviews]) {
+        [subView removeFromSuperview];
+    }
+    
+    UIImageView *logoImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[[theMP party] shortName]]];
+    [partyLogoView addSubview:logoImgView];
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55.0f;
 }
 
 /*

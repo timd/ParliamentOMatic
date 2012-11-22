@@ -1,25 +1,21 @@
 //
-//  CMConstViewController.m
+//  CMPartyTableViewController.m
 //  TWFY
 //
-//  Created by Tim on 20/11/2012.
+//  Created by Tim on 22/11/2012.
 //  Copyright (c) 2012 Charismatic Megafauna Ltd. All rights reserved.
 //
 
-#import "CMConstViewController.h"
-#import "Constituency.h"
+#import "CMPartyTableViewController.h"
+#import "CMPartyDetailViewViewController.h"
 #import "Party.h"
 #import "MP.h"
 
-#import "CMConstDetailViewController.h"
-
-@interface CMConstViewController ()
-
-@property (nonatomic, strong) NSArray *constituencies;
+@interface CMPartyTableViewController ()
 
 @end
 
-@implementation CMConstViewController
+@implementation CMPartyTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,9 +36,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"CMConstTableCell" bundle:nil] forCellReuseIdentifier:@"ConstituencyCell"];
-    self.title = @"Constituencies";
-    self.constituencies = [Constituency findAllSortedBy:@"name" ascending:YES];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CMPartyTableCell" bundle:nil] forCellReuseIdentifier:@"PartyCell"];
+    self.partiesArray = [Party findAllSortedBy:@"name" ascending:YES];
+    
+    self.title = @"Parties";
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.constituencies count];
+    return [self.partiesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,11 +71,10 @@
     }
     
     // Configure the cell...
-    Constituency *constituency = [self.constituencies objectAtIndex:indexPath.row];
-    MP *theMP = [constituency mp];
+    Party *theParty = [self.partiesArray objectAtIndex:indexPath.row];
     
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:2000];
-    [nameLabel setText:[constituency name]];
+    [nameLabel setText:[theParty name]];
     
     UIView *partyLogoView = [cell viewWithTag:1000];
     
@@ -86,7 +82,7 @@
         [subView removeFromSuperview];
     }
     
-    NSString *partyShortName = [[theMP party] shortName];
+    NSString *partyShortName = [theParty shortName];
     
     UIImageView *logoImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:partyShortName]];
     [partyLogoView addSubview:logoImgView];
@@ -142,14 +138,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    CMConstDetailViewController *detailViewController = [[CMConstDetailViewController alloc] initWithNibName:@"CMConstDetailView" bundle:nil];
-
-    // Pass the selected object to the new view controller.
-    Constituency *selectedConstituency = [self.constituencies objectAtIndex:indexPath.row];
-    [detailViewController setConstituency:selectedConstituency];
+    CMPartyDetailViewViewController *detailViewController = [[CMPartyDetailViewViewController alloc] initWithNibName:@"CMPartyDetailView" bundle:nil];
     
+    Party *selectedParty = [self.partiesArray objectAtIndex:indexPath.row];
+    [detailViewController setParty:selectedParty];
     [self.navigationController pushViewController:detailViewController animated:YES];
-    
+
 }
 
 @end

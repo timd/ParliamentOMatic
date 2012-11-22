@@ -85,6 +85,14 @@
             Party *newParty = [Party createEntity];
             [newParty setName:partyName];
             [newMP setParty:newParty];
+            
+            // Create party shortName
+            NSArray *explodedName = [partyName componentsSeparatedByString:@" "];
+            NSMutableString *shortName = [[NSMutableString alloc] init];
+            for (NSString *component in explodedName) {
+                [shortName appendString:component];
+            }
+            [newParty setShortName:shortName];
         }
 
         //*** Handle constituency ***//

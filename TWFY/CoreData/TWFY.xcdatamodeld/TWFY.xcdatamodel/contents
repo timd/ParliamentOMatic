@@ -15,11 +15,12 @@
     </entity>
     <entity name="Party" representedClassName="Party" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="mps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MP" inverseName="party" inverseEntity="MP" syncable="YES"/>
     </entity>
     <elements>
         <element name="Constituency" positionX="205" positionY="228" width="128" height="73"/>
         <element name="MP" positionX="108" positionY="54" width="128" height="150"/>
-        <element name="Party" positionX="-243" positionY="45" width="128" height="73"/>
+        <element name="Party" positionX="-243" positionY="45" width="128" height="90"/>
     </elements>
 </model>

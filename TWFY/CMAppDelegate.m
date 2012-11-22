@@ -10,6 +10,7 @@
 
 #import "CMMPTableViewController.h"
 #import "CMConstViewController.h"
+#import "CMPartyTableViewController.h"
 
 #import "CMParser.h"
 
@@ -42,7 +43,11 @@
     UINavigationController *constNavController = [[UINavigationController alloc] initWithRootViewController:constTable];
     [constNavController setTitle:@"Constituencies"];
     
-    NSArray *tabsArray = [NSArray arrayWithObjects:mpNavController, constNavController, nil];
+    CMPartyTableViewController *partyTable = [[CMPartyTableViewController alloc] initWithNibName:@"CMPartyTableView" bundle:nil];
+    UINavigationController *partyNavController = [[UINavigationController alloc] initWithRootViewController:partyTable];
+    [partyNavController setTitle:@"Parties"];
+    
+    NSArray *tabsArray = [NSArray arrayWithObjects:mpNavController, constNavController, partyNavController, nil];
     
     // Instantiate tab bar
     UITabBarController *tbc = [[UITabBarController alloc] init];

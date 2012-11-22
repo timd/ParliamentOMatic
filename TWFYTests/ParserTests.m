@@ -94,6 +94,12 @@ describe(@"The JSON Parser", ^{
             [[theValue([labourMPs count]) should] equal:theValue(2)];
         });
         
+        it(@"should create one MP belonging to the 'LiberalDemocrats", ^{
+            Party *libDem = [Party findFirstByAttribute:@"shortName" withValue:@"LiberalDemocrat"];
+            NSSet *libDemMps = [libDem mps];
+            [[theValue([libDemMps count]) should] equal:theValue(1)];
+        });
+        
     });
     
     context(@"when dealing with Constituencies", ^{

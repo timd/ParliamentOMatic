@@ -34,6 +34,10 @@ describe(@"The Party object", ^{
         [[party should] respondToSelector:@selector(mps)];
     });
     
+    it(@"should have a shortName", ^{
+        [[party should] respondToSelector:@selector(shortName)];
+    });
+    
     afterEach(^{
         [MagicalRecord cleanUp];
     });

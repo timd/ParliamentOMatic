@@ -5,6 +5,7 @@
 
 const struct PartyAttributes PartyAttributes = {
 	.name = @"name",
+	.shortName = @"shortName",
 };
 
 const struct PartyRelationships PartyRelationships = {
@@ -48,6 +49,13 @@ const struct PartyFetchedProperties PartyFetchedProperties = {
 
 
 @dynamic name;
+
+
+
+
+
+
+@dynamic shortName;
 
 
 
