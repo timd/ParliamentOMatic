@@ -11,6 +11,7 @@
 #import "CMMPTableViewController.h"
 #import "CMConstViewController.h"
 #import "CMPartyTableViewController.h"
+#import "CMSettingsViewController.h"
 
 #import "CMParser.h"
 
@@ -47,7 +48,10 @@
     UINavigationController *partyNavController = [[UINavigationController alloc] initWithRootViewController:partyTable];
     [partyNavController setTitle:@"Parties"];
     
-    NSArray *tabsArray = [NSArray arrayWithObjects:mpNavController, constNavController, partyNavController, nil];
+    CMSettingsViewController *settingsView = [[CMSettingsViewController alloc] initWithNibName:@"CMSettingsView" bundle:nil];
+    [settingsView setTitle:@"Settings"];
+    
+    NSArray *tabsArray = [NSArray arrayWithObjects:mpNavController, constNavController, partyNavController, settingsView, nil];
     
     // Instantiate tab bar
     UITabBarController *tbc = [[UITabBarController alloc] init];
