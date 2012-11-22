@@ -4,7 +4,15 @@
         "person_id": "24709",
         "name": "Person One",
         "party": "Labour",
-        "constituency": "Constituency One"
+        "constituency": "Constituency One",
+        "office": [
+            {
+                "dept": "Work and Pensions",
+                "position": "Minister of State (Pensions)",
+                "from_date": "2010-05-13",
+                "to_date": "9999-12-31"
+            }
+        ]
     },
     {
         "member_id": "40636",

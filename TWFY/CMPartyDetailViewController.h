@@ -10,7 +10,7 @@
 
 @class Party;
 
-@interface CMPartyDetailViewViewController : UIViewController
+@interface CMPartyDetailViewController : UIViewController
 
 @property (nonatomic, strong) Party *party;
 

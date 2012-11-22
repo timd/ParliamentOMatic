@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 Charismatic Megafauna Ltd. All rights reserved.
 //
 
-#import "CMPartyDetailViewViewController.h"
+#import "CMPartyDetailViewController.h"
 #import "Party.h"
 
-@interface CMPartyDetailViewViewController ()
+@interface CMPartyDetailViewController ()
 
 @property (nonatomic, weak) IBOutlet UILabel *partyName;
 
 @end
 
-@implementation CMPartyDetailViewViewController
+@implementation CMPartyDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

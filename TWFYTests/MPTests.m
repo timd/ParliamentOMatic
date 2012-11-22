@@ -46,6 +46,10 @@ describe(@"The MP object", ^{
         [[mp should] respondToSelector:@selector(constituency)];
     });
     
+    it(@"should have an office", ^{
+        [[mp should] respondToSelector:@selector(office)];
+    });
+    
     afterEach(^{
         [MagicalRecord cleanUp];
     });

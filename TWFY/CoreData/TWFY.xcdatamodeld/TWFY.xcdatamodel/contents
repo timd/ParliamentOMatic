@@ -11,7 +11,15 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="person_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="constituency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Constituency" inverseName="mp" inverseEntity="Constituency" syncable="YES"/>
+        <relationship name="office" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Office" inverseName="mp" inverseEntity="Office" syncable="YES"/>
         <relationship name="party" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Party" inverseName="mps" inverseEntity="Party" syncable="YES"/>
+    </entity>
+    <entity name="Office" representedClassName="Office" syncable="YES">
+        <attribute name="dept" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to_date" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mp" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MP" inverseName="office" inverseEntity="MP" syncable="YES"/>
     </entity>
     <entity name="Party" representedClassName="Party" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +28,8 @@
     </entity>
     <elements>
         <element name="Constituency" positionX="205" positionY="228" width="128" height="73"/>
-        <element name="MP" positionX="108" positionY="54" width="128" height="150"/>
+        <element name="MP" positionX="108" positionY="54" width="128" height="163"/>
         <element name="Party" positionX="-243" positionY="45" width="128" height="90"/>
+        <element name="Office" positionX="-101" positionY="-136" width="128" height="118"/>
     </elements>
 </model>

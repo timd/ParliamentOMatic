@@ -7,7 +7,7 @@
 //
 
 #import "CMPartyTableViewController.h"
-#import "CMPartyDetailViewViewController.h"
+#import "CMPartyDetailViewController.h"
 #import "Party.h"
 #import "MP.h"
 
@@ -138,7 +138,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    CMPartyDetailViewViewController *detailViewController = [[CMPartyDetailViewViewController alloc] initWithNibName:@"CMPartyDetailView" bundle:nil];
+    CMPartyDetailViewController *detailViewController = [[CMPartyDetailViewController alloc] initWithNibName:@"CMPartyDetailView" bundle:nil];
     
     Party *selectedParty = [self.partiesArray objectAtIndex:indexPath.row];
     [detailViewController setParty:selectedParty];

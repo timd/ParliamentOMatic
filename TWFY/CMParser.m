@@ -11,6 +11,7 @@
 #import "MP.h"
 #import "Party.h"
 #import "Constituency.h"
+#import "Office.h"
 
 @implementation CMParser
 
@@ -101,6 +102,24 @@
         Constituency *newConstituency = [Constituency createEntity];
         [newConstituency setName:[dict objectForKey:@"constituency"]];
         [newMP setConstituency:newConstituency];
+        
+        //*** Handle office if it exists ***//
+        if ([dict objectForKey:@"office"]) {
+
+            NSArray *officesArray = [dict objectForKey:@"office"];
+            
+            for (NSDictionary *officeDictionary in officesArray) {
+                
+                Office *newOffice = [Office createEntity];
+                [newOffice setDept:[officeDictionary objectForKey:@"dept"]];
+                [newOffice setPosition:[officeDictionary objectForKey:@"position"]];
+                [newOffice setFrom_date:[officeDictionary objectForKey:@"from_date"]];
+                [newOffice setTo_date:[officeDictionary objectForKey:@"to_date"]];
+                
+                [newMP setOffice:newOffice];
+            }
+            
+        }
         
     }
     

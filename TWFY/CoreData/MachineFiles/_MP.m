@@ -13,6 +13,7 @@ const struct MPAttributes MPAttributes = {
 
 const struct MPRelationships MPRelationships = {
 	.constituency = @"constituency",
+	.office = @"office",
 	.party = @"party",
 };
 
@@ -136,6 +137,10 @@ const struct MPFetchedProperties MPFetchedProperties = {
 
 
 @dynamic constituency;
+
+	
+
+@dynamic office;
 
 	
 

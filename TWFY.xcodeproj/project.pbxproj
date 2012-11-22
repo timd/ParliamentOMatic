@@ -161,10 +161,16 @@
 		227E3B12165BEF0E00F3483C /* CMConstDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */; };
 		22E5C38B165E418F002AAAE0 /* CMConstTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */; };
 		22E5C38E165E4419002AAAE0 /* CMPartyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */; };
-		22E5C393165E456F002AAAE0 /* CMPartyDetailViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewViewController.m */; };
+		22E5C393165E456F002AAAE0 /* CMPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */; };
 		22E5C394165E456F002AAAE0 /* CMPartyDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C392165E456F002AAAE0 /* CMPartyDetailView.xib */; };
 		22E5C399165E4969002AAAE0 /* CMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C397165E4969002AAAE0 /* CMSettingsViewController.m */; };
 		22E5C39C165E49BA002AAAE0 /* CMSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C39B165E49BA002AAAE0 /* CMSettingsView.xib */; };
+		22E5C3A8165E79AF002AAAE0 /* OfficeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C3A7165E79AF002AAAE0 /* OfficeTests.m */; };
+		22E5C3AC165E7AFC002AAAE0 /* Office.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C3AB165E7AFC002AAAE0 /* Office.m */; };
+		22E5C3AD165E7AFC002AAAE0 /* Office.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C3AB165E7AFC002AAAE0 /* Office.m */; };
+		22E5C3B0165E7B08002AAAE0 /* _Office.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C3AF165E7B08002AAAE0 /* _Office.m */; };
+		22E5C3B1165E7B08002AAAE0 /* _Office.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C3AF165E7B08002AAAE0 /* _Office.m */; };
+		22E5C3B2165E7C3A002AAAE0 /* CMPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -329,12 +335,17 @@
 		227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstDetailView.xib; sourceTree = "<group>"; };
 		22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstTableCell.xib; sourceTree = "<group>"; };
 		22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMPartyTableCell.xib; sourceTree = "<group>"; };
-		22E5C390165E456F002AAAE0 /* CMPartyDetailViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyDetailViewViewController.h; sourceTree = "<group>"; };
-		22E5C391165E456F002AAAE0 /* CMPartyDetailViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPartyDetailViewViewController.m; sourceTree = "<group>"; };
+		22E5C390165E456F002AAAE0 /* CMPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyDetailViewController.h; sourceTree = "<group>"; };
+		22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPartyDetailViewController.m; sourceTree = "<group>"; };
 		22E5C392165E456F002AAAE0 /* CMPartyDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMPartyDetailView.xib; sourceTree = "<group>"; };
 		22E5C396165E4969002AAAE0 /* CMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSettingsViewController.h; sourceTree = "<group>"; };
 		22E5C397165E4969002AAAE0 /* CMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSettingsViewController.m; sourceTree = "<group>"; };
 		22E5C39B165E49BA002AAAE0 /* CMSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMSettingsView.xib; sourceTree = "<group>"; };
+		22E5C3A7165E79AF002AAAE0 /* OfficeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeTests.m; sourceTree = "<group>"; };
+		22E5C3AA165E7AFC002AAAE0 /* Office.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Office.h; sourceTree = "<group>"; };
+		22E5C3AB165E7AFC002AAAE0 /* Office.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Office.m; sourceTree = "<group>"; };
+		22E5C3AE165E7B08002AAAE0 /* _Office.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Office.h; sourceTree = "<group>"; };
+		22E5C3AF165E7B08002AAAE0 /* _Office.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Office.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,6 +709,8 @@
 		2248FFD7165BBAD000723210 /* HumanFiles */ = {
 			isa = PBXGroup;
 			children = (
+				22E5C3AA165E7AFC002AAAE0 /* Office.h */,
+				22E5C3AB165E7AFC002AAAE0 /* Office.m */,
 				2248FFD9165BBAF200723210 /* Constituency.h */,
 				2248FFDA165BBAF200723210 /* Constituency.m */,
 				2248FFDB165BBAF200723210 /* MP.h */,
@@ -711,6 +724,8 @@
 		2248FFD8165BBAD000723210 /* MachineFiles */ = {
 			isa = PBXGroup;
 			children = (
+				22E5C3AE165E7B08002AAAE0 /* _Office.h */,
+				22E5C3AF165E7B08002AAAE0 /* _Office.m */,
 				2248FFE5165BBAFB00723210 /* _Constituency.h */,
 				2248FFE6165BBAFB00723210 /* _Constituency.m */,
 				2248FFE7165BBAFB00723210 /* _MP.h */,
@@ -736,6 +751,7 @@
 				2248FFF6165BC32700723210 /* ConstituencyTests.m */,
 				2248FFBA165BB3F900723210 /* MPTests.m */,
 				2248FFBC165BB3F900723210 /* PartyTests.m */,
+				22E5C3A7165E79AF002AAAE0 /* OfficeTests.m */,
 			);
 			name = "Object tests";
 			sourceTree = "<group>";
@@ -820,8 +836,8 @@
 		22E5C38F165E4557002AAAE0 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				22E5C390165E456F002AAAE0 /* CMPartyDetailViewViewController.h */,
-				22E5C391165E456F002AAAE0 /* CMPartyDetailViewViewController.m */,
+				22E5C390165E456F002AAAE0 /* CMPartyDetailViewController.h */,
+				22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */,
 				22E5C392165E456F002AAAE0 /* CMPartyDetailView.xib */,
 			);
 			name = Detail;
@@ -1042,8 +1058,10 @@
 				227E3B11165BEF0E00F3483C /* CMConstDetailViewController.m in Sources */,
 				227E29A8165E3502002FF81E /* CMPartyTableViewController.m in Sources */,
 				227E29BD165E38BD002FF81E /* CMMPTableCell.m in Sources */,
-				22E5C393165E456F002AAAE0 /* CMPartyDetailViewViewController.m in Sources */,
+				22E5C393165E456F002AAAE0 /* CMPartyDetailViewController.m in Sources */,
 				22E5C399165E4969002AAAE0 /* CMSettingsViewController.m in Sources */,
+				22E5C3AC165E7AFC002AAAE0 /* Office.m in Sources */,
+				22E5C3B0165E7B08002AAAE0 /* _Office.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1122,10 @@
 				22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */,
 				227E29A1165D2D83002FF81E /* MPTableTests.m in Sources */,
 				227E29A9165E3502002FF81E /* CMPartyTableViewController.m in Sources */,
+				22E5C3B2165E7C3A002AAAE0 /* CMPartyDetailViewController.m in Sources */,
+				22E5C3A8165E79AF002AAAE0 /* OfficeTests.m in Sources */,
+				22E5C3AD165E7AFC002AAAE0 /* Office.m in Sources */,
+				22E5C3B1165E7B08002AAAE0 /* _Office.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

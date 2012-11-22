@@ -14,6 +14,7 @@ extern const struct MPAttributes {
 
 extern const struct MPRelationships {
 	__unsafe_unretained NSString *constituency;
+	__unsafe_unretained NSString *office;
 	__unsafe_unretained NSString *party;
 } MPRelationships;
 
@@ -21,6 +22,7 @@ extern const struct MPFetchedProperties {
 } MPFetchedProperties;
 
 @class Constituency;
+@class Office;
 @class Party;
 
 
@@ -107,6 +109,13 @@ extern const struct MPFetchedProperties {
 
 
 
+@property (nonatomic, strong) Office *office;
+
+//- (BOOL)validateOffice:(id*)value_ error:(NSError**)error_;
+
+
+
+
 @property (nonatomic, strong) Party *party;
 
 //- (BOOL)validateParty:(id*)value_ error:(NSError**)error_;
@@ -163,6 +172,11 @@ extern const struct MPFetchedProperties {
 
 - (Constituency*)primitiveConstituency;
 - (void)setPrimitiveConstituency:(Constituency*)value;
+
+
+
+- (Office*)primitiveOffice;
+- (void)setPrimitiveOffice:(Office*)value;
 
 
 
