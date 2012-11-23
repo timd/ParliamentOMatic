@@ -8,10 +8,17 @@
 
 #import "AFHTTPClient.h"
 
+@protocol TWFYClientDelegate <NSObject>
+
+-(void)apiRepliedWithResponse:(id)response;
+
+@end
+
 @interface TWFYClient : AFHTTPClient
 
-+(TWFYClient *)sharedInstance;
+@property (nonatomic, weak) id <TWFYClientDelegate> delegate;
 
--(NSDictionary *)getDataForPerson:(id)person;
++(TWFYClient *)sharedInstance;
+-(void)getDataForPerson:(id)person;
     
 @end

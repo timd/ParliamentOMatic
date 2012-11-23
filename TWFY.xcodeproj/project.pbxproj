@@ -23,7 +23,6 @@
 /* Begin PBXBuildFile section */
 		22086F93165BD3BE003AAE61 /* test-update.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F92165BD3BE003AAE61 /* test-update.json */; };
 		22086F96165BD803003AAE61 /* UpdateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086F95165BD803003AAE61 /* UpdateTests.m */; };
-		22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086F9B165BE01D003AAE61 /* InitialDataTests.m */; };
 		22086F9E165BE591003AAE61 /* allMPs.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F9D165BE591003AAE61 /* allMPs.json */; };
 		22086F9F165BE591003AAE61 /* allMPs.json in Resources */ = {isa = PBXBuildFile; fileRef = 22086F9D165BE591003AAE61 /* allMPs.json */; };
 		22086FBD165BEA8D003AAE61 /* CMMPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FBB165BEA8D003AAE61 /* CMMPTableViewController.m */; };
@@ -1195,7 +1194,6 @@
 				2248FFF0165BBAFB00723210 /* _Party.m in Sources */,
 				2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */,
 				22086F96165BD803003AAE61 /* UpdateTests.m in Sources */,
-				22086F9C165BE01D003AAE61 /* InitialDataTests.m in Sources */,
 				227E29A1165D2D83002FF81E /* MPTableTests.m in Sources */,
 				227E29A9165E3502002FF81E /* CMPartyTableViewController.m in Sources */,
 				22E5C3B2165E7C3A002AAAE0 /* CMPartyDetailViewController.m in Sources */,

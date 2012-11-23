@@ -44,30 +44,35 @@ describe(@"The Comms object", ^{
         
         it(@"should return nil if not passed a valid MP object", ^{
             NSString *theString = @"This won't work";
-            NSDictionary *returnDict = [client getDataForPerson:theString];
-            [returnDict shouldBeNil];
-        });
-        
-        it(@"should return an NSDictionary if it's passed a valid MP object", ^{
-            theMP = [MP createEntity];
-            id returnDict = [client getDataForPerson:theMP];
-            [returnDict shouldNotBeNil];
-            [[returnDict should] beKindOfClass:[NSDictionary class]];
-        });
-        
-    });
-    
-    context(@"when calling the TWFY API", ^{
-        
-        [MagicalRecord setDefaultModelFromClass:[self class]];
-        [MagicalRecord setupCoreDataStackWithInMemoryStore];
+            id response = nil;
+            id delegateMock = [KWMock mockForProtocol:@protocol(TWFYClientDelegate)];
 
-        MP *mp = [MP createEntity];
-        [mp setPerson_id:[NSNumber numberWithInt:10900]];
+            [client setDelegate:delegateMock];
+            
+            [[[delegateMock shouldEventually] receive] apiRepliedWithResponse:response];
+            
+            [client getDataForPerson:theString];
+
+            [response shouldBeNil];
+        });
         
-        NSDictionary *results = [client getDataForPerson:mp];
+        it(@"should receive some data if passed a valid MP object", ^{
+            
+            MP *theMP = [MP createEntity];
+            [theMP setPerson_id:@10900];
+            
+            NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"getPerson" ofType:@"json"];
+            NSData *response = [NSData dataWithContentsOfFile:filePath];
+            id delegateMock = [KWMock mockForProtocol:@protocol(TWFYClientDelegate)];
+            
+            [client setDelegate:delegateMock];
+            
+            [[[delegateMock shouldEventually] receive] apiRepliedWithResponse:response];
+            
+            [client getDataForPerson:theMP];
+            
+        });
         
-        [results shouldNotBeNil];
         
     });
     

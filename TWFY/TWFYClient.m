@@ -37,56 +37,52 @@
     
     [OHHTTPStubs addRequestHandler:^OHHTTPStubsResponse*(NSURLRequest *request, BOOL onlyCheck) {
         
-        //NSString *basename = [request.URL.absoluteString lastPathComponent];
+    //NSString *basename = [request.URL.absoluteString lastPathComponent];
 
-        OHHTTPStubsResponse *response = [OHHTTPStubsResponse responseWithFile:@"getPerson.json" contentType:@"text/json"
-                                        responseTime:OHHTTPStubsDownloadSpeedEDGE];
-        
-        return response;
+    return [OHHTTPStubsResponse responseWithFile:@"getPerson.json"
+                                     contentType:@"text/json"
+                                    responseTime:OHHTTPStubsDownloadSpeedEDGE];
     }];
     
 #endif
     
 }
 
--(NSDictionary *)getDataForPerson:(id)person {
+-(void)getDataForPerson:(id)person {
     
     [self stubNetworkCall];
 
     if (![person isKindOfClass:[MP class]]) {
-        return nil;
+        [self.delegate apiRepliedWithResponse:nil];
+        return;
     }
 
     // Convert to person
     MP *theMP = nil;
     if ([person isKindOfClass:[MP class]]) {
         theMP = (MP *)person;
+    } else {
+        [self.delegate apiRepliedWithResponse:nil];
+        return;
     }
     
     // Build API call
     NSString *personID = [NSString stringWithFormat:@"%@", [theMP person_id]];
     
     // getPerson?key=ABCD&id=12345
-    NSString *call = [NSString stringWithFormat:@"%@?key=%@&id=%@", kAPIEndpointURL, kAPIKey, personID];
+    NSString *call = [NSString stringWithFormat:@"%@getPerson?key=%@&id=%@", kAPIEndpointURL, kAPIKey, personID];
     
     // Call TWFY API
-    __block NSDictionary *returnDict = nil;
-    __block NSError *returnError = nil;
 
     [self getPath:call parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         // Success
-        returnDict = responseObject;
+        [self.delegate apiRepliedWithResponse:responseObject];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Failure
-        returnError = error;
+        [self.delegate apiRepliedWithResponse:nil];
     }];
-    
-    if (returnError) {
-        return nil;
-    }
 
-    return returnDict;
-    
 }
 
 @end
