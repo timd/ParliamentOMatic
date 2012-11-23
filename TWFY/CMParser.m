@@ -17,7 +17,18 @@
 
 -(void)parseInitialAppData {
 
+    // Load initial data
     [self parseMpDataWithJson:@"allMPs"];
+    
+    // Hit API to pull down data for each MP
+    NSArray *allMPs = [MP findAll];
+    
+    for (MP *theMP in allMPs) {
+        
+        
+        
+    }
+    
 
 }
 
@@ -222,6 +233,43 @@
     
     [[NSManagedObjectContext MR_defaultContext] save];
 
+}
+
+-(void)parsePerson:(MP *)mp WithJson:(NSString *)jsonFileName {
+    
+    // Load file
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [bundle pathForResource:jsonFileName ofType:@"json"];
+    NSData *fileData = [NSData dataWithContentsOfFile:path];
+    
+    // Parse file into dictionary
+    NSError *error = nil;
+    NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&error];
+    
+    // Process dictionary
+    
+    for (NSDictionary *dict in rawArray) {
+        
+        // Look for dictionary with a left_house of '9999-12-31' -
+        // this indicates that the member id is valid
+        if ([[dict objectForKey:@"left_house"] isEqualToString:@"9999-12-31"]) {
+            
+            // Process dictionary
+            NSString *entered_house = [dict objectForKey:@"entered_house"];
+            NSString *twfy_url = [dict objectForKey:@"url"];
+            NSString *image_url = [dict objectForKey:@"image"];
+            NSNumber *image_height = [dict objectForKey:@"image_height"];
+            NSNumber *image_width = [dict objectForKey:@"image_width"];
+            
+            [mp setEntered_house:entered_house];
+            [mp setTwfy_url:twfy_url];
+            [mp setImage_url:image_url];
+            [mp setImage_height:image_height];
+            [mp setImage_width:image_width];
+        }
+    }
+
+    
 }
 
 @end

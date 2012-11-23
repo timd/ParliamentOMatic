@@ -159,6 +159,10 @@
 		227E29BF165E38F2002FF81E /* CMMPTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E29BE165E38F2002FF81E /* CMMPTableCell.xib */; };
 		227E3B11165BEF0E00F3483C /* CMConstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */; };
 		227E3B12165BEF0E00F3483C /* CMConstDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */; };
+		22918125165F825800C9601F /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22918124165F825800C9601F /* PersonTests.m */; };
+		22918128165F871F00C9601F /* getPerson.json in Resources */ = {isa = PBXBuildFile; fileRef = 22918127165F871F00C9601F /* getPerson.json */; };
+		2291812B165F8EA100C9601F /* TWFYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2291812A165F8EA100C9601F /* TWFYClient.m */; };
+		2291812C165F8EA100C9601F /* TWFYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2291812A165F8EA100C9601F /* TWFYClient.m */; };
 		22E5C38B165E418F002AAAE0 /* CMConstTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */; };
 		22E5C38E165E4419002AAAE0 /* CMPartyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */; };
 		22E5C393165E456F002AAAE0 /* CMPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */; };
@@ -335,6 +339,10 @@
 		227E3B0E165BEF0E00F3483C /* CMConstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstDetailViewController.h; sourceTree = "<group>"; };
 		227E3B0F165BEF0E00F3483C /* CMConstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConstDetailViewController.m; sourceTree = "<group>"; };
 		227E3B10165BEF0E00F3483C /* CMConstDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstDetailView.xib; sourceTree = "<group>"; };
+		22918124165F825800C9601F /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
+		22918127165F871F00C9601F /* getPerson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getPerson.json; sourceTree = "<group>"; };
+		22918129165F8EA100C9601F /* TWFYClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFYClient.h; sourceTree = "<group>"; };
+		2291812A165F8EA100C9601F /* TWFYClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFYClient.m; sourceTree = "<group>"; };
 		22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstTableCell.xib; sourceTree = "<group>"; };
 		22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMPartyTableCell.xib; sourceTree = "<group>"; };
 		22E5C390165E456F002AAAE0 /* CMPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyDetailViewController.h; sourceTree = "<group>"; };
@@ -671,6 +679,7 @@
 		2248FFA9165BB39300723210 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				22918127165F871F00C9601F /* getPerson.json */,
 				22086F9D165BE591003AAE61 /* allMPs.json */,
 				2248FFAA165BB39300723210 /* test-mps.json */,
 				22086F92165BD3BE003AAE61 /* test-update.json */,
@@ -766,6 +775,7 @@
 				2248FFBB165BB3F900723210 /* ParserTests.m */,
 				22086F95165BD803003AAE61 /* UpdateTests.m */,
 				22086F9B165BE01D003AAE61 /* InitialDataTests.m */,
+				22918124165F825800C9601F /* PersonTests.m */,
 			);
 			name = "Parser tests";
 			sourceTree = "<group>";
@@ -861,6 +871,8 @@
 		22E5C39D165E4A13002AAAE0 /* Comms */ = {
 			isa = PBXGroup;
 			children = (
+				22918129165F8EA100C9601F /* TWFYClient.h */,
+				2291812A165F8EA100C9601F /* TWFYClient.m */,
 			);
 			name = Comms;
 			sourceTree = "<group>";
@@ -984,6 +996,7 @@
 				22086F93165BD3BE003AAE61 /* test-update.json in Resources */,
 				22086F9F165BE591003AAE61 /* allMPs.json in Resources */,
 				227E29AB165E3502002FF81E /* CMPartyTableView.xib in Resources */,
+				22918128165F871F00C9601F /* getPerson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1078,6 +1091,7 @@
 				22E5C399165E4969002AAAE0 /* CMSettingsViewController.m in Sources */,
 				22E5C3AC165E7AFC002AAAE0 /* Office.m in Sources */,
 				22E5C3B0165E7B08002AAAE0 /* _Office.m in Sources */,
+				2291812B165F8EA100C9601F /* TWFYClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1142,6 +1156,8 @@
 				22E5C3A8165E79AF002AAAE0 /* OfficeTests.m in Sources */,
 				22E5C3AD165E7AFC002AAAE0 /* Office.m in Sources */,
 				22E5C3B1165E7B08002AAAE0 /* _Office.m in Sources */,
+				22918125165F825800C9601F /* PersonTests.m in Sources */,
+				2291812C165F8EA100C9601F /* TWFYClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

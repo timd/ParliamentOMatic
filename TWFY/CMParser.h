@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class MP;
+
 @interface CMParser : NSObject
 
 -(void)parseInitialAppData;
 -(void)parseMpDataWithJson:(NSString *)jsonFileName;
 -(void)updateDataWithJson:(NSString *)jsonFileName;
+
+-(void)parsePerson:(MP *)mp WithJson:(NSString *)jsonFileName;
 
 @end
