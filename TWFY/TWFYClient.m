@@ -52,11 +52,6 @@
     
     [self stubNetworkCall];
 
-    if (![person isKindOfClass:[MP class]]) {
-        [self.delegate apiRepliedWithResponse:nil];
-        return;
-    }
-
     // Convert to person
     MP *theMP = nil;
     if ([person isKindOfClass:[MP class]]) {
@@ -67,20 +62,19 @@
     }
     
     // Build API call
-    NSString *personID = [NSString stringWithFormat:@"%@", [theMP person_id]];
-    
     // getPerson?key=ABCD&id=12345
+    NSString *personID = [NSString stringWithFormat:@"%@", [theMP person_id]];
     NSString *call = [NSString stringWithFormat:@"%@getPerson?key=%@&id=%@", kAPIEndpointURL, kAPIKey, personID];
     
     // Call TWFY API
-
     [self getPath:call parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // Success
+
         [self.delegate apiRepliedWithResponse:responseObject];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // Failure
+
         [self.delegate apiRepliedWithResponse:nil];
+        
     }];
 
 }

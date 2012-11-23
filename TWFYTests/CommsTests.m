@@ -43,6 +43,7 @@ describe(@"The Comms object", ^{
         });
         
         it(@"should return nil if not passed a valid MP object", ^{
+
             NSString *theString = @"This won't work";
             id response = nil;
             id delegateMock = [KWMock mockForProtocol:@protocol(TWFYClientDelegate)];
@@ -54,21 +55,31 @@ describe(@"The Comms object", ^{
             [client getDataForPerson:theString];
 
             [response shouldBeNil];
+            
         });
         
         it(@"should receive some data if passed a valid MP object", ^{
             
+            // Create the dummy MP object to send through to the TWFYClient
             MP *theMP = [MP createEntity];
             [theMP setPerson_id:@10900];
             
+            // Create the expected response object as an NSData representation of the getPerson.json file
             NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"getPerson" ofType:@"json"];
             NSData *response = [NSData dataWithContentsOfFile:filePath];
+            
+            // Create a mock object to act as the TWFY delegate, and make it 'conform' to
+            // the TWFYClientDelegate protocol
             id delegateMock = [KWMock mockForProtocol:@protocol(TWFYClientDelegate)];
             
+            // Set the client's delegate property
             [client setDelegate:delegateMock];
             
+            // Set the assertion that eventually there should an 'apiRepliedWithResponse' message,
+            // and it will have the response object as a parameter
             [[[delegateMock shouldEventually] receive] apiRepliedWithResponse:response];
             
+            // Call the method under test
             [client getDataForPerson:theMP];
             
         });
