@@ -10,4 +10,8 @@
 
 @interface TWFYClient : AFHTTPClient
 
++(TWFYClient *)sharedInstance;
+
+-(NSDictionary *)getDataForPerson:(id)person;
+    
 @end

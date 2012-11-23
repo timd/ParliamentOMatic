@@ -7,6 +7,7 @@
 //
 
 #import "CMParser.h"
+#import "TWFYClient.h"
 
 #import "MP.h"
 #import "Party.h"
@@ -21,6 +22,8 @@
     [self parseMpDataWithJson:@"allMPs"];
     
     // Hit API to pull down data for each MP
+    TWFYClient *client = [TWFYClient sharedInstance];
+    
     NSArray *allMPs = [MP findAll];
     
     for (MP *theMP in allMPs) {
