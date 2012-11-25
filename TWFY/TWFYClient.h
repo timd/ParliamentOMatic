@@ -10,13 +10,13 @@
 
 @protocol TWFYClientDelegate <NSObject>
 
--(void)apiRepliedWithResponse:(id)response;
+-(void)apiRepliedWithResponse:(id)response forCall:(NSString *)call;
 
 @end
 
 @interface TWFYClient : AFHTTPClient
 
-@property (nonatomic, weak) id <TWFYClientDelegate> delegate;
+@property (nonatomic, strong) id <TWFYClientDelegate> delegate;
 
 +(TWFYClient *)sharedInstance;
 -(void)getDataForPerson:(id)person;

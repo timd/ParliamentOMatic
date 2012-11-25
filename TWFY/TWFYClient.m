@@ -50,14 +50,17 @@
 
 -(void)getDataForPerson:(id)person {
     
-    [self stubNetworkCall];
+    //[self stubNetworkCall];
 
+    // Set call back type
+    NSString *callType = @"getPerson";
+    
     // Convert to person
     MP *theMP = nil;
     if ([person isKindOfClass:[MP class]]) {
         theMP = (MP *)person;
     } else {
-        [self.delegate apiRepliedWithResponse:nil];
+        [self.delegate apiRepliedWithResponse:nil forCall:callType];
         return;
     }
     
@@ -69,11 +72,11 @@
     // Call TWFY API
     [self getPath:call parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
-        [self.delegate apiRepliedWithResponse:responseObject];
+        [self.delegate apiRepliedWithResponse:responseObject forCall:callType];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
-        [self.delegate apiRepliedWithResponse:nil];
+        [self.delegate apiRepliedWithResponse:nil forCall:callType];
         
     }];
 

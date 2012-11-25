@@ -7,14 +7,34 @@
 //
 
 #import "CMParser.h"
-#import "TWFYClient.h"
 
 #import "MP.h"
 #import "Party.h"
 #import "Constituency.h"
 #import "Office.h"
 
+#define kGetPersonCall @"getPerson"
+
+@interface CMParser()
+
+@property (nonatomic, strong) CMParser *parser;
+@property (nonatomic, strong) TWFYClient *client;
+
+@end
+
 @implementation CMParser
+
+
+-(void)parsePersonDataFromApi:(NSData *)data {
+    
+    NSError *error = nil;
+    NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    
+    NSLog(@"rawArray = %@", rawArray);
+    
+    // TODO:
+    
+}
 
 -(void)parseInitialAppData {
 
@@ -22,14 +42,14 @@
     [self parseMpDataWithJson:@"allMPs"];
     
     // Hit API to pull down data for each MP
-    TWFYClient *client = [TWFYClient sharedInstance];
-    
+    self.client = [TWFYClient sharedInstance];
+    [self.client setDelegate:self];
+
     NSArray *allMPs = [MP findAll];
     
     for (MP *theMP in allMPs) {
-        
-        
-        
+        NSLog(@"Getting MP: %@", [theMP name]);
+        [self.client getDataForPerson:theMP];
     }
     
 
@@ -271,8 +291,26 @@
             [mp setImage_width:image_width];
         }
     }
+}
 
+-(void)apiRepliedWithResponse:(id)response forCall:(NSString *)call {
     
+    NSLog(@"got response...");
+
+    // Handle data arriving from TWFY client
+    if ([call isEqualToString:kGetPersonCall]) {
+        
+        // Handle getPerson data
+        NSData *responseData = (NSData *)response;
+        NSLog(@"got data...");
+        [self parsePersonDataFromApi:responseData];
+        
+    }
+    
+}
+
+-(void)dealloc {
+    [self.client setDelegate:nil];
 }
 
 @end

@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TWFYClient.h"
 
 @class MP;
 
-@interface CMParser : NSObject
+@interface CMParser : NSObject <TWFYClientDelegate>
 
 -(void)parseInitialAppData;
 -(void)parseMpDataWithJson:(NSString *)jsonFileName;
 -(void)updateDataWithJson:(NSString *)jsonFileName;
 
 -(void)parsePerson:(MP *)mp WithJson:(NSString *)jsonFileName;
+
+-(void)apiRepliedWithResponse:(id)response forCall:(NSString *)call;
 
 @end
