@@ -23,8 +23,22 @@
     // Override point for customization after application launch.
     
     // Initialise Magical Record
-    [MagicalRecord setupAutoMigratingCoreDataStack];
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"TWFY.sqlite"];
+/*
+    NSURL *storeUrl = [NSPersistentStore MR_urlForStoreName:@"TWYF.sqlite"];
+    NSLog(@"url = %@", storeUrl);
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TWFY" ofType:@"sqlite"];
+    
+    NSURL *preloadURL = [NSURL fileURLWithPath:path];
+    NSError* err = nil;
+        
+    if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeUrl error:&err]) {
+        NSLog(@"Oops, could not copy preloaded data");
+    }
 
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"TWFY.sqlite"];
+*/
     // Create initial MP objects
     CMParser *parser = [[CMParser alloc] init];
     [parser parseInitialAppData];

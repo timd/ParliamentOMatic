@@ -67,6 +67,8 @@
     // Load initial data
     [self parseMpDataWithJson:@"allMPs"];
     
+    [self updateFromTWFY];
+    
 }
 
 -(void)updateFromTWFY {
