@@ -18,7 +18,7 @@
 -(void)updateDataWithJson:(NSString *)jsonFileName;
 
 -(void)parsePerson:(MP *)mp WithJson:(NSString *)jsonFileName;
-
+-(void)parsePersonDataFromApi:(NSData *)data;
 -(void)apiRepliedWithResponse:(id)response forCall:(NSString *)call;
 
 @end

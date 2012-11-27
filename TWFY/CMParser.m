@@ -29,11 +29,37 @@
     
     NSError *error = nil;
     NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-    
-    NSLog(@"rawArray = %@", rawArray);
-    
-    // TODO:
-    
+
+    for (NSDictionary *dict in rawArray) {
+        
+        NSString *person_id = [dict objectForKey:@"person_id"];
+        NSArray *mps = [MP findByAttribute:@"person_id" withValue:[NSNumber numberWithInt:[person_id integerValue]]];
+        
+        MP *mp = [mps objectAtIndex:0];
+        
+        if (mp) {
+
+            // Look for dictionary with a left_house of '9999-12-31' -
+            // this indicates that the member id is valid
+            if ([[dict objectForKey:@"left_house"] isEqualToString:@"9999-12-31"]) {
+                
+                // Process dictionary
+                NSString *entered_house = [dict objectForKey:@"entered_house"];
+                NSString *twfy_url = [dict objectForKey:@"url"];
+                NSString *image_url = [dict objectForKey:@"image"];
+                NSNumber *image_height = [dict objectForKey:@"image_height"];
+                NSNumber *image_width = [dict objectForKey:@"image_width"];
+                
+                [mp setEntered_house:entered_house];
+                [mp setTwfy_url:twfy_url];
+                [mp setImage_url:image_url];
+                [mp setImage_height:image_height];
+                [mp setImage_width:image_width];
+            }
+            
+        }
+    }
+
 }
 
 -(void)parseInitialAppData {
@@ -41,6 +67,10 @@
     // Load initial data
     [self parseMpDataWithJson:@"allMPs"];
     
+}
+
+-(void)updateFromTWFY {
+
     // Hit API to pull down data for each MP
     self.client = [TWFYClient sharedInstance];
     [self.client setDelegate:self];
@@ -51,7 +81,6 @@
         NSLog(@"Getting MP: %@", [theMP name]);
         [self.client getDataForPerson:theMP];
     }
-    
 
 }
 

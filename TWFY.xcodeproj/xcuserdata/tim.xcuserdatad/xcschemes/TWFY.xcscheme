@@ -37,17 +37,6 @@
                BlueprintName = "TWFYTests"
                ReferencedContainer = "container:TWFY.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "ConstituencyTests">
-               </Test>
-               <Test
-                  Identifier = "MPTests">
-               </Test>
-               <Test
-                  Identifier = "PartyTests">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

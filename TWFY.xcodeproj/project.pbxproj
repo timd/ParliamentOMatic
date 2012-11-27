@@ -31,6 +31,7 @@
 		22086FC6165BEB74003AAE61 /* CMConstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22086FC4165BEB74003AAE61 /* CMConstView.xib */; };
 		22086FCE165BEE33003AAE61 /* CMMPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */; };
 		22086FCF165BEE33003AAE61 /* CMMPDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */; };
+		2248E2E61664FBFE00984EA7 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2248E2E51664FBFE00984EA7 /* red.png */; };
 		2248FEBE165BAE7A00723210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBD165BAE7A00723210 /* UIKit.framework */; };
 		2248FEC0165BAE7A00723210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEBF165BAE7A00723210 /* Foundation.framework */; };
 		2248FEC2165BAE7A00723210 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2248FEC1165BAE7A00723210 /* CoreGraphics.framework */; };
@@ -215,6 +216,7 @@
 		22086FCB165BEE33003AAE61 /* CMMPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMPDetailViewController.h; sourceTree = "<group>"; };
 		22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMPDetailViewController.m; sourceTree = "<group>"; };
 		22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMMPDetailView.xib; sourceTree = "<group>"; };
+		2248E2E51664FBFE00984EA7 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		2248FEB9165BAE7A00723210 /* TWFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248FEBD165BAE7A00723210 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2248FEBF165BAE7A00723210 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -817,6 +819,7 @@
 		227E29AC165E3877002FF81E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2248E2E51664FBFE00984EA7 /* red.png */,
 				22E5C3B7165E817E002AAAE0 /* Icons */,
 				227E29AD165E3877002FF81E /* Logos */,
 			);
@@ -1027,6 +1030,7 @@
 				22E5C3B4165E8167002AAAE0 /* logo.png in Resources */,
 				22E5C3B6165E816B002AAAE0 /* logo@2x.png in Resources */,
 				22918151165F9BDA00C9601F /* getPerson.json in Resources */,
+				2248E2E61664FBFE00984EA7 /* red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,8 +67,40 @@ describe(@"The JSON Parser", ^{
             [[[theMP image_width] should] equal:[NSNumber numberWithInt:49]];
         });
 
-
     });
+    
+    context(@"when dealing with data returned from the API", ^{
+        
+        __block NSData *fileData = nil;
+        
+        beforeEach(^{
+
+            // Load file
+            NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+            NSString *path = [bundle pathForResource:@"getPerson" ofType:@"json"];
+            
+            NSError *error = nil;
+            NSString *dataString = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
+            fileData = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+            
+        });
+        
+        it(@"should create an image_url", ^{
+            
+            [theMP setPerson_id:[NSNumber numberWithInt:10900]];
+            [parser parsePersonDataFromApi:fileData];
+            
+            NSArray *mpsArray = [MP findByAttribute:@"person_id" withValue:[NSNumber numberWithInt:10900]];
+            [[mpsArray should] haveCountOf:1];
+            [[[mpsArray objectAtIndex:0] should] beKindOfClass:[MP class]];
+            
+            MP *returnedMP = [mpsArray objectAtIndex:0];
+            [[returnedMP image_url] shouldNotBeNil];
+            
+        });
+        
+    });
+    
     
     
     afterEach(^{
