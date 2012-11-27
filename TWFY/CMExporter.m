@@ -26,10 +26,6 @@
 
 -(void)exportMPs {
     
-    NSArray *allMPs = [MP findAll];
-    
-    NSJSONSerialization
-    
 }
 
 @end

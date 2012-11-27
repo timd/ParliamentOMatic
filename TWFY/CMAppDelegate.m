@@ -8,6 +8,8 @@
 
 #import "CMAppDelegate.h"
 
+#import <RestKit/Restkit.h>
+
 #import "CMMPTableViewController.h"
 #import "CMConstViewController.h"
 #import "CMPartyTableViewController.h"

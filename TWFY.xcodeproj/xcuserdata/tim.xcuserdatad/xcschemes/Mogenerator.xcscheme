@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2248FFC2165BB51C00723210"
+               BlueprintIdentifier = "2248FFCA165BB6D400723210"
                BuildableName = "Mogenerator"
                BlueprintName = "Mogenerator"
                ReferencedContainer = "container:TWFY.xcodeproj">

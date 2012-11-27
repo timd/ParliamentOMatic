@@ -7,3 +7,6 @@
 [submodule "Frameworks/AFNetworking"]
 	path = Frameworks/AFNetworking
 	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "Frameworks/RestKit"]
+	path = Frameworks/RestKit
+	url = git://github.com/RestKit/RestKit.git
