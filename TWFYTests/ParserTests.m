@@ -12,6 +12,7 @@
 #import "MP.h"
 #import "Party.h"
 #import "Constituency.h"
+#import "Office.h"
 
 SPEC_BEGIN(ParserTests)
 
@@ -79,6 +80,61 @@ describe(@"The JSON Parser", ^{
             [[theValue([mpsArray count]) should] equal:theValue(1)];
         });
         
+    });
+    
+    context(@"when dealing with an Office", ^{
+
+        it(@"should have created one office", ^{
+            NSArray *officeArray = [Office findAll];
+            [officeArray shouldNotBeNil];
+            [[theValue([officeArray count]) should] equal:theValue(1)];
+        });
+
+        it(@"should have created an office called 'Minister of State (Pensions)'", ^{
+            NSArray *officeArray = [Office findAll];
+            Office *testOffice = [officeArray objectAtIndex:0];
+            [[[testOffice position] should] equal:@"Minister of State (Pensions)"];
+        });
+
+        it(@"should have created an office in the dept 'Work and Pensions'", ^{
+            NSArray *officeArray = [Office findAll];
+            Office *testOffice = [officeArray objectAtIndex:0];
+            [[[testOffice dept] should] equal:@"Work and Pensions"];
+        });
+
+        it(@"should have created an office with a from_date of '2010-05-13'", ^{
+            NSArray *officeArray = [Office findAll];
+            Office *testOffice = [officeArray objectAtIndex:0];
+            [[[testOffice from_date] should] equal:@"2010-05-13"];
+        });
+
+        it(@"should have created an office with a to_date of '9999-12-31'", ^{
+            NSArray *officeArray = [Office findAll];
+            Office *testOffice = [officeArray objectAtIndex:0];
+            [[[testOffice to_date] should] equal:@"9999-12-31"];
+        });
+        
+        it(@"should have linked Person One to the office", ^{
+            NSArray *personArray = [MP findByAttribute:@"name" withValue:@"Person One"];
+            [personArray shouldNotBeNil];
+            MP *personOne = [personArray objectAtIndex:0];
+            
+            NSArray *officeArray = [Office findAll];
+            Office *testOffice = [officeArray objectAtIndex:0];
+            [[[testOffice mp] should] equal:personOne];
+        });
+        
+        it(@"should have linked the Office to Person One", ^{
+            NSArray *officeArray = [Office findAll];
+            Office *testOffice = [officeArray objectAtIndex:0];
+            
+            NSArray *personArray = [MP findByAttribute:@"name" withValue:@"Person One"];
+            [personArray shouldNotBeNil];
+            MP *personOne = [personArray objectAtIndex:0];
+            [[[personOne office] should] equal:testOffice];
+
+        });
+
     });
     
     context(@"when dealing with Parties", ^{

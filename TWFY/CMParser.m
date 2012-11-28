@@ -11,12 +11,76 @@
 #import "MP.h"
 #import "Party.h"
 #import "Constituency.h"
+#import "Office.h"
+
+#define kGetPersonCall @"getPerson"
+
+@interface CMParser()
+
+@property (nonatomic, strong) CMParser *parser;
+@property (nonatomic, strong) TWFYClient *client;
+
+@end
 
 @implementation CMParser
 
+
+-(void)parsePersonDataFromApi:(NSData *)data {
+    
+    NSError *error = nil;
+    NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+
+    for (NSDictionary *dict in rawArray) {
+        
+        NSString *person_id = [dict objectForKey:@"person_id"];
+        NSArray *mps = [MP findByAttribute:@"person_id" withValue:[NSNumber numberWithInt:[person_id integerValue]]];
+        
+        MP *mp = [mps objectAtIndex:0];
+        
+        if (mp) {
+
+            // Look for dictionary with a left_house of '9999-12-31' -
+            // this indicates that the member id is valid
+            if ([[dict objectForKey:@"left_house"] isEqualToString:@"9999-12-31"]) {
+                
+                // Process dictionary
+                NSString *entered_house = [dict objectForKey:@"entered_house"];
+                NSString *twfy_url = [dict objectForKey:@"url"];
+                NSString *image_url = [dict objectForKey:@"image"];
+                NSNumber *image_height = [dict objectForKey:@"image_height"];
+                NSNumber *image_width = [dict objectForKey:@"image_width"];
+                
+                [mp setEntered_house:entered_house];
+                [mp setTwfy_url:twfy_url];
+                [mp setImage_url:image_url];
+                [mp setImage_height:image_height];
+                [mp setImage_width:image_width];
+            }
+            
+        }
+    }
+
+}
+
 -(void)parseInitialAppData {
 
+    // Load initial data
     [self parseMpDataWithJson:@"allMPs"];
+    
+}
+
+-(void)updateFromTWFY {
+
+    // Hit API to pull down data for each MP
+    self.client = [TWFYClient sharedInstance];
+    [self.client setDelegate:self];
+
+    NSArray *allMPs = [MP findAll];
+    
+    for (MP *theMP in allMPs) {
+        NSLog(@"Getting MP: %@", [theMP name]);
+        [self.client getDataForPerson:theMP];
+    }
 
 }
 
@@ -101,6 +165,24 @@
         Constituency *newConstituency = [Constituency createEntity];
         [newConstituency setName:[dict objectForKey:@"constituency"]];
         [newMP setConstituency:newConstituency];
+        
+        //*** Handle office if it exists ***//
+        if ([dict objectForKey:@"office"]) {
+
+            NSArray *officesArray = [dict objectForKey:@"office"];
+            
+            for (NSDictionary *officeDictionary in officesArray) {
+                
+                Office *newOffice = [Office createEntity];
+                [newOffice setDept:[officeDictionary objectForKey:@"dept"]];
+                [newOffice setPosition:[officeDictionary objectForKey:@"position"]];
+                [newOffice setFrom_date:[officeDictionary objectForKey:@"from_date"]];
+                [newOffice setTo_date:[officeDictionary objectForKey:@"to_date"]];
+                
+                [newMP setOffice:newOffice];
+            }
+            
+        }
         
     }
     
@@ -203,6 +285,61 @@
     
     [[NSManagedObjectContext MR_defaultContext] save];
 
+}
+
+-(void)parsePerson:(MP *)mp WithJson:(NSString *)jsonFileName {
+    
+    // Load file
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [bundle pathForResource:jsonFileName ofType:@"json"];
+    NSData *fileData = [NSData dataWithContentsOfFile:path];
+    
+    // Parse file into dictionary
+    NSError *error = nil;
+    NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&error];
+    
+    // Process dictionary
+    
+    for (NSDictionary *dict in rawArray) {
+        
+        // Look for dictionary with a left_house of '9999-12-31' -
+        // this indicates that the member id is valid
+        if ([[dict objectForKey:@"left_house"] isEqualToString:@"9999-12-31"]) {
+            
+            // Process dictionary
+            NSString *entered_house = [dict objectForKey:@"entered_house"];
+            NSString *twfy_url = [dict objectForKey:@"url"];
+            NSString *image_url = [dict objectForKey:@"image"];
+            NSNumber *image_height = [dict objectForKey:@"image_height"];
+            NSNumber *image_width = [dict objectForKey:@"image_width"];
+            
+            [mp setEntered_house:entered_house];
+            [mp setTwfy_url:twfy_url];
+            [mp setImage_url:image_url];
+            [mp setImage_height:image_height];
+            [mp setImage_width:image_width];
+        }
+    }
+}
+
+-(void)apiRepliedWithResponse:(id)response forCall:(NSString *)call {
+    
+    NSLog(@"got response...");
+
+    // Handle data arriving from TWFY client
+    if ([call isEqualToString:kGetPersonCall]) {
+        
+        // Handle getPerson data
+        NSData *responseData = (NSData *)response;
+        NSLog(@"got data...");
+        [self parsePersonDataFromApi:responseData];
+        
+    }
+    
+}
+
+-(void)dealloc {
+    [self.client setDelegate:nil];
 }
 
 @end

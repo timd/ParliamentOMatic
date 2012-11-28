@@ -46,6 +46,30 @@ describe(@"The MP object", ^{
         [[mp should] respondToSelector:@selector(constituency)];
     });
     
+    it(@"should have an office", ^{
+        [[mp should] respondToSelector:@selector(office)];
+    });
+    
+    it(@"should respond to 'entered_house'", ^{
+        [[mp should] respondToSelector:@selector(entered_house)];
+    });
+    
+    it(@"should respond to 'twfy_url'", ^{
+        [[mp should] respondToSelector:@selector(twfy_url)];
+    });
+    
+    it(@"should respond to 'image_url'", ^{
+        [[mp should] respondToSelector:@selector(image_url)];
+    });
+
+    it(@"should respond to 'image_height'", ^{
+        [[mp should] respondToSelector:@selector(image_height)];
+    });
+
+    it(@"should respond to 'image_width'", ^{
+        [[mp should] respondToSelector:@selector(image_width)];
+    });
+
     afterEach(^{
         [MagicalRecord cleanUp];
     });

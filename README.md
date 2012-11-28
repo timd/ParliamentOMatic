@@ -1,4 +1,5 @@
-laughing-archer
-===============
+Parliament-O-Matic
+==================
 
-TWFY iOS client
+Being a small, but exquisitely-formed iOS client for TheyWorkForYou.com
+
