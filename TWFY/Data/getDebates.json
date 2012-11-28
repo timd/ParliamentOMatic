@@ -1,0 +1,46 @@
+{
+    "info": {
+        "s": "speaker:10001 section:debates",
+        "results_per_page": 20,
+        "page": 1,
+        "first_result": 1,
+        "total_results": 1515,
+        "spelling_correction": ""
+    },
+    "searchdescription": "in the 'Commons debates' speaker:Diane Abbott",
+    "rows": [
+        {
+            "gid": "2012-11-27a.132.0",
+            "hdate": "2012-11-27",
+            "htime": "11:30:00",
+            "section_id": "22196945",
+            "subsection_id": "22197025",
+            "htype": "12",
+            "major": "1",
+            "minor": "0",
+            "speaker_id": "40289",
+            "hpos": "89",
+            "video_status": "0",
+            "epobject_id": "22197030",
+            "body": "<p pid=\"a.132.0/1\">On the question of vulnerable groups, does the Minister support the proposal of <phrase class=\"honfriend\" id=\"uk.org.publicwhip/member/40107\" name=\"Phillip Lee\">the hon. Member for Bracknell (Dr Lee)</phrase> to ration NHS drugs, either by adopting the Danish system in which people have a personal budget for drugs and have to pay to top up, or by removing the right to free prescriptions for long-term conditions such as diabetes? Does she appreciate how much harder that would make life for millions of people in vulnerable groups, or is this the real face of the coalition on the NHS&#8212;drug rationing?</p>",
+            "collapsed": 0,
+            "relevance": 100,
+            "extract": "On the question of vulnerable groups, does the Minister support the proposal of  the hon. Member for Bracknell (Dr Lee) to ration NHS drugs, either by adopting the Danish system in which people have a personal budget for drugs and have to pay to top up, or by removing the right to free prescriptions for long-term conditions such as diabetes? Does she appreciate how much harder that would make...",
+            "listurl": "/debates/?id=2012-11-27a.131.2&amp;s=speaker%3A10001+section%3Adebates#g132.0",
+            "speaker": {
+                "member_id": "40289",
+                "title": "",
+                "first_name": "Diane",
+                "last_name": "Abbott",
+                "house": "1",
+                "constituency": "Hackney North and Stoke Newington",
+                "party": "Labour",
+                "person_id": "10001",
+                "url": "/mp/?m=40289"
+            },
+            "parent": {
+                "body": "Oral Answers to Questions &#8212; Health: Vulnerable Groups (Access to Health Care)"
+            }
+        }
+    ]
+}

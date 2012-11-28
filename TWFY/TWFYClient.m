@@ -135,6 +135,42 @@
         
     }];
 
+}
+
+-(void)getDebatesForPerson:(id)person {
+    
+    //[self stubNetworkCall];
+    
+    // Set call back type
+    NSString *callType = @"getDebates";
+    
+    // Convert to person
+    MP *theMP = nil;
+    if ([person isKindOfClass:[MP class]]) {
+        theMP = (MP *)person;
+    } else {
+        self.operationCompleted = YES;
+        [self.delegate apiRepliedWithResponse:nil forCall:callType];
+        return;
+    }
+    
+    // Build API call
+    // getPerson?key=ABCD&id=12345
+    NSString *personID = [NSString stringWithFormat:@"%@", [theMP person_id]];
+    NSString *call = [NSString stringWithFormat:@"%@getDebates?key=%@&id=%@", kAPIEndpointURL, kAPIKey, personID];
+    
+    // Call TWFY API
+    [self getPath:call parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        self.operationCompleted = YES;
+        [self.delegate apiRepliedWithResponse:responseObject forCall:callType];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        self.operationCompleted = YES;
+        [self.delegate apiRepliedWithResponse:nil forCall:callType];
+        
+    }];
     
 }
 

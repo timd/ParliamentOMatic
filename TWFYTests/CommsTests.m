@@ -42,7 +42,14 @@ describe(@"The Comms object", ^{
                                                  contentType:@"text/json"
                                                 responseTime:OHHTTPStubsDownloadSpeedEDGE];
             }
-            
+
+            if ([urlString rangeOfString:@"getDebates"].location != NSNotFound) {
+                // Handle getPerson
+                return [OHHTTPStubsResponse responseWithFile:@"getDebates.json"
+                                                 contentType:@"text/json"
+                                                responseTime:OHHTTPStubsDownloadSpeedEDGE];
+            }
+
             return nil;
             
         }];
@@ -67,11 +74,15 @@ describe(@"The Comms object", ^{
             [client shouldNotBeNil];
         });
         
+    });
+    
+    context(@"when calling getDataForPerson", ^{
+        
         it(@"should respond to getDataForPerson:", ^{
             [[client should] respondToSelector:@selector(getDataForPerson:)];
         });
-        
-        it(@"should return nil when calling getDataForPerson if not passed a valid MP object", ^{
+
+        it(@"should return nil if not passed a valid MP object", ^{
 
             NSString *theString = @"This won't work";
             id response = nil;
@@ -88,7 +99,7 @@ describe(@"The Comms object", ^{
             
         });
         
-        it(@"should receive some data when calling getDataForPerson if passed a valid MP object", ^{
+        it(@"should receive some data if passed a valid MP object", ^{
             
             // Create the dummy MP object to send through to the TWFYClient
             MP *theMP = [MP createEntity];
@@ -116,8 +127,16 @@ describe(@"The Comms object", ^{
             [client getDataForPerson:theMP];
             
         });
+        
+    });
+    
+    context(@"when calling getWransForPerson", ^{
 
-        it(@"should return nil when calling getWransForPerson if not passed a valid MP object", ^{
+        it(@"should respond to getWransForPerson:", ^{
+            [[client should] respondToSelector:@selector(getWransForPerson:)];
+        });
+
+        it(@"should return nil if not passed a valid MP object", ^{
             
             NSString *theString = @"This won't work";
             id response = nil;
@@ -134,7 +153,7 @@ describe(@"The Comms object", ^{
             
         });
         
-        it(@"should receive some data for Written Answers if passed a valid MP object", ^{
+        it(@"should receive some data if passed a valid MP object", ^{
             
             // Create the dummy MP object to send through to the TWFYClient
             MP *theMP = [MP createEntity];
@@ -163,6 +182,61 @@ describe(@"The Comms object", ^{
             
         });
 
+    });
+    
+    context(@"when calling getDebatesForPerson", ^{
+        
+        it(@"should respond to getDebatesForPerson:", ^{
+            [[client should] respondToSelector:@selector(getDebatesForPerson:)];
+        });
+        
+        it(@"should return nil if not passed a valid MP object", ^{
+            
+            NSString *theString = @"This won't work";
+            id response = nil;
+            id delegateMock = [KWMock mockForProtocol:@protocol(TWFYClientDelegate)];
+            NSString *callType = @"getDebates";
+            
+            [client setDelegate:delegateMock];
+            
+            [[[delegateMock shouldEventually] receive] apiRepliedWithResponse:response forCall:callType];
+            
+            [client getDebatesForPerson:theString];
+            
+            [response shouldBeNil];
+            
+        });
+        
+        it(@"should receive some data if passed a valid MP object", ^{
+            
+            // Create the dummy MP object to send through to the TWFYClient
+            MP *theMP = [MP createEntity];
+            [theMP setPerson_id:@10001];
+            
+            // Create the expected response object as an NSData representation of the getWrans file
+            NSString *filePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"getDebates" ofType:@"json"];
+            NSData *response = [NSData dataWithContentsOfFile:filePath];
+            
+            // Create a mock object to act as the TWFY delegate, and make it 'conform' to
+            // the TWFYClientDelegate protocol
+            id delegateMock = [KWMock mockForProtocol:@protocol(TWFYClientDelegate)];
+            
+            // Set the client's delegate property
+            [client setDelegate:delegateMock];
+            
+            // Set call type
+            NSString *callType = @"getDebates";
+            
+            // Set the assertion that eventually there should an 'apiRepliedWithResponse' message,
+            // and it will have the response object as a parameter
+            [[[delegateMock shouldEventually] receive] apiRepliedWithResponse:response forCall:callType];
+
+            // Call the method under test
+            [client getDebatesForPerson:theMP];
+            
+        });
+
+        
     });
     
     afterEach(^{

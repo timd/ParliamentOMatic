@@ -22,5 +22,6 @@
 +(TWFYClient *)sharedInstance;
 -(void)getDataForPerson:(id)person;
 -(void)getWransForPerson:(id)person;
+-(void)getDebatesForPerson:(id)person;
     
 @end

@@ -14,6 +14,8 @@
 #import "Office.h"
 
 #define kGetPersonCall @"getPerson"
+#define kGetWritteAnswerCall @"getWrans"
+#define kGetDebatesCall @"getDebates"
 
 @interface CMParser()
 
@@ -329,6 +331,9 @@
     }
 }
 
+#pragma mark -
+#pragma mark TWFYClient delegate methods
+
 -(void)apiRepliedWithResponse:(id)response forCall:(NSString *)call {
     
     NSLog(@"got response...");
@@ -342,6 +347,95 @@
         [self parsePersonDataFromApi:responseData];
         
     }
+    
+    if ([call isEqualToString:kGetWritteAnswerCall]) {
+        NSData *responseData = (NSData *)response;
+        NSLog(@"got data...");
+        [self parseWrittenAnswerDataWithJson:responseData];
+    }
+
+    if ([call isEqualToString:kGetWritteAnswerCall]) {
+        NSData *responseData = (NSData *)response;
+        NSLog(@"got data...");
+        [self parseWrittenAnswerDataWithJson:responseData];
+    }
+
+    if ([call isEqualToString:kGetDebatesCall]) {
+        NSData *responseData = (NSData *)response;
+        NSLog(@"got data...");
+        [self parseDebatesDataWithJson:responseData];
+    }
+}
+
+#pragma mark -
+#pragma mark Written Answers
+
+-(void)parseWrittenAnswerDataWithJson:(NSData *)fileData {
+    
+    // Parse file into dictionary
+    NSError *error = nil;
+    NSDictionary *inputDict = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&error];
+ 
+    // Extract payload
+    NSArray *rows = [inputDict objectForKey:@"rows"];
+
+    NSMutableArray *returnArray = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *rawDict in rows) {
+    
+        // Process hdate
+        NSString *hdate = [rawDict objectForKey:@"hdate"];
+        
+        // process body
+        NSString *body = [rawDict objectForKey:@"body"];
+        
+        // process extract
+        NSString *extract = [rawDict objectForKey:@"extract"];
+        
+        // process parent
+        NSDictionary *parentDict = [rawDict objectForKey:@"parent"];
+        NSString *parent = [parentDict objectForKey:@"body"];
+        
+        NSDictionary *returnDict = @{@"hdate" : hdate, @"body" : body, @"extract" : extract, @"parent" : parent};
+        [returnArray addObject:returnDict];
+        
+    }
+    
+    NSArray *finalArray = [NSArray arrayWithArray:returnArray];
+
+    [self.delegate handleWrittenAnswerResponseWithArray:finalArray];
+    
+}
+
+#pragma mark -
+#pragma mark Debates
+
+-(void)parseDebatesDataWithJson:(NSData *)fileData {
+    
+    // Parse file into dictionary
+    NSError *error = nil;
+    NSDictionary *inputDict = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&error];
+    
+    // DO STUFF
+    NSArray *rowsArray = [inputDict objectForKey:@"rows"];
+    
+    NSMutableArray *workingArray = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *rowDictionary in rowsArray) {
+        
+        NSString *hdate = [rowDictionary objectForKey:@"hdate"];
+        NSString *body = [rowDictionary objectForKey:@"body"];
+        NSString *extract = [rowDictionary objectForKey:@"extract"];
+        NSString *listurl = [rowDictionary objectForKey:@"listurl"];
+        
+        NSDictionary *parentDictionary = [rowDictionary objectForKey:@"parent"];
+        NSString *parent = [parentDictionary objectForKey:@"body"];
+        NSDictionary *workingDictionary = @{@"hdate" : hdate, @"body" : body, @"extract" : extract, @"parent" : parent, @"listurl" : listurl};
+        [workingArray addObject:workingDictionary];
+    }
+    
+    NSArray *finalArray = [NSArray arrayWithArray:workingArray];
+    [self.delegate handleDebatesResponseWithArray:finalArray];
     
 }
 

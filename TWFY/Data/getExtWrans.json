@@ -42,6 +42,40 @@
                 "body": "Written Answers &#8212; Health: Dental Health: Children",
                 "listurl": "/wrans/?id=2012-11-27a.129788.h"
             }
+        },
+        {
+            "gid": "2012-11-27a.129790.q0",
+            "hdate": "2012-11-27",
+            "htime": null,
+            "section_id": "22196018",
+            "subsection_id": "22196058",
+            "htype": "12",
+            "major": "3",
+            "minor": "1",
+            "speaker_id": "40289",
+            "hpos": "285",
+            "video_status": "0",
+            "epobject_id": "22196059",
+            "body": "<p pid=\"a.211W.1/1\" qnum=\"129790\">To ask the Secretary of State for Health what steps he has taken to ensure capitation fees paid to salaried dentists participating in the second stage of the NHS dental contract pilot scheme will reflect the complexity and difficulty of providing treatment for patients of salaried dentists.</p>",
+            "collapsed": 0,
+            "relevance": 100,
+            "extract": "To ask the Secretary of State for Health what steps he has taken to ensure capitation fees paid to salaried dentists participating in the second stage of the NHS dental contract pilot scheme will reflect the complexity and difficulty of providing treatment for patients of salaried dentists.",
+            "listurl": "/wrans/?id=2012-11-27a.129790.h&amp;s=speaker%3A10001+section%3Awrans#g129790.q0",
+            "speaker": {
+                "member_id": "40289",
+                "title": "",
+                "first_name": "Diane",
+                "last_name": "Abbott",
+                "house": "1",
+                "constituency": "Hackney North and Stoke Newington",
+                "party": "Labour",
+                "person_id": "10001",
+                "url": "/mp/?m=40289"
+            },
+            "parent": {
+                "body": "Written Answers &#8212; Health: Dental Services",
+                "listurl": "/wrans/?id=2012-11-27a.129790.h"
+            }
         }
     ]
 }
