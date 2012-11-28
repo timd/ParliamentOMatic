@@ -43,8 +43,13 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"CMMPTableCell" bundle:nil] forCellReuseIdentifier:kToryCell];
     
     self.title = @"MPs";
-    self.mpsArray = [MP findAllSortedBy:@"lastname" ascending:YES];
+//    self.mpsArray = [MP findAllSortedBy:@"lastname" ascending:YES];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    self.mpsArray = [MP findAllSortedBy:@"lastname" ascending:YES];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

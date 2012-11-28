@@ -33,6 +33,11 @@
     for (NSDictionary *dict in rawArray) {
         
         NSString *person_id = [dict objectForKey:@"person_id"];
+        
+        if ([person_id isEqualToString:@"11148"]) {
+            NSLog(@"11148");
+        }
+        
         NSArray *mps = [MP findByAttribute:@"person_id" withValue:[NSNumber numberWithInt:[person_id integerValue]]];
         
         MP *mp = [mps objectAtIndex:0];
@@ -66,6 +71,8 @@
 
     // Load initial data
     [self parseMpDataWithJson:@"allMPs"];
+    
+    [self updateFromTWFY];
     
 }
 

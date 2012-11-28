@@ -13,7 +13,7 @@
 #import "CMPartyTableViewController.h"
 #import "CMSettingsViewController.h"
 
-#import "CMParser.h"
+#import "CMExporter.h"
 
 @implementation CMAppDelegate
 
@@ -26,8 +26,8 @@
     [MagicalRecord setupAutoMigratingCoreDataStack];
 
     // Create initial MP objects
-    CMParser *parser = [[CMParser alloc] init];
-    [parser parseInitialAppData];
+    CMExporter *exporter = [[CMExporter alloc] init];
+    [exporter loadMPDataFromJsonFile];
     
     
 /*    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

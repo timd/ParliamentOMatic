@@ -169,6 +169,10 @@
 		2291814A165F94EE00C9601F /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 22918147165F94EE00C9601F /* OHHTTPStubsResponse.m */; };
 		2291814B165F94EE00C9601F /* OHHTTPStubsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 22918147165F94EE00C9601F /* OHHTTPStubsResponse.m */; };
 		22918151165F9BDA00C9601F /* getPerson.json in Resources */ = {isa = PBXBuildFile; fileRef = 22918127165F871F00C9601F /* getPerson.json */; };
+		22A45D621666110700933452 /* CMExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A45D611666110700933452 /* CMExporter.m */; };
+		22A45D631666110700933452 /* CMExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A45D611666110700933452 /* CMExporter.m */; };
+		22A45D661666214F00933452 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D651666214F00933452 /* data.json */; };
+		22A45D671666214F00933452 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D651666214F00933452 /* data.json */; };
 		22E5C38B165E418F002AAAE0 /* CMConstTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */; };
 		22E5C38E165E4419002AAAE0 /* CMPartyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */; };
 		22E5C393165E456F002AAAE0 /* CMPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */; };
@@ -356,6 +360,9 @@
 		22918146165F94EE00C9601F /* OHHTTPStubsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHTTPStubsResponse.h; sourceTree = "<group>"; };
 		22918147165F94EE00C9601F /* OHHTTPStubsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHTTPStubsResponse.m; sourceTree = "<group>"; };
 		2291814D165F96CC00C9601F /* CMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstants.h; sourceTree = "<group>"; };
+		22A45D601666110700933452 /* CMExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExporter.h; sourceTree = "<group>"; };
+		22A45D611666110700933452 /* CMExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExporter.m; sourceTree = "<group>"; };
+		22A45D651666214F00933452 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstTableCell.xib; sourceTree = "<group>"; };
 		22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMPartyTableCell.xib; sourceTree = "<group>"; };
 		22E5C390165E456F002AAAE0 /* CMPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyDetailViewController.h; sourceTree = "<group>"; };
@@ -695,6 +702,7 @@
 		2248FFA9165BB39300723210 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				22A45D651666214F00933452 /* data.json */,
 				22918127165F871F00C9601F /* getPerson.json */,
 				22086F9D165BE591003AAE61 /* allMPs.json */,
 				2248FFAA165BB39300723210 /* test-mps.json */,
@@ -770,6 +778,8 @@
 			children = (
 				2248FFA5165BB38800723210 /* CMParser.h */,
 				2248FFA6165BB38800723210 /* CMParser.m */,
+				22A45D601666110700933452 /* CMExporter.h */,
+				22A45D611666110700933452 /* CMExporter.m */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -1031,6 +1041,7 @@
 				22E5C3B6165E816B002AAAE0 /* logo@2x.png in Resources */,
 				22918151165F9BDA00C9601F /* getPerson.json in Resources */,
 				2248E2E61664FBFE00984EA7 /* red.png in Resources */,
+				22A45D661666214F00933452 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1055,7 @@
 				22086F9F165BE591003AAE61 /* allMPs.json in Resources */,
 				227E29AB165E3502002FF81E /* CMPartyTableView.xib in Resources */,
 				22918128165F871F00C9601F /* getPerson.json in Resources */,
+				22A45D671666214F00933452 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1153,7 @@
 				2291812B165F8EA100C9601F /* TWFYClient.m in Sources */,
 				22918148165F94EE00C9601F /* OHHTTPStubs.m in Sources */,
 				2291814A165F94EE00C9601F /* OHHTTPStubsResponse.m in Sources */,
+				22A45D621666110700933452 /* CMExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,6 +1222,7 @@
 				22918142165F90A200C9601F /* CommsTests.m in Sources */,
 				22918149165F94EE00C9601F /* OHHTTPStubs.m in Sources */,
 				2291814B165F94EE00C9601F /* OHHTTPStubsResponse.m in Sources */,
+				22A45D631666110700933452 /* CMExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
