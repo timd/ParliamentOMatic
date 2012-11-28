@@ -142,6 +142,8 @@
 		2248FFF3165BBD5900723210 /* PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBC165BB3F900723210 /* PartyTests.m */; };
 		2248FFF4165BBEE400723210 /* MPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFBA165BB3F900723210 /* MPTests.m */; };
 		2248FFF7165BC32700723210 /* ConstituencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FFF6165BC32700723210 /* ConstituencyTests.m */; };
+		227A6FED16663FB5004D511D /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 227A6FEC16663FB5004D511D /* test.json */; };
+		227A6FEE16663FB5004D511D /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 227A6FEC16663FB5004D511D /* test.json */; };
 		227E29A1165D2D83002FF81E /* MPTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E29A0165D2D83002FF81E /* MPTableTests.m */; };
 		227E29A2165D2E77002FF81E /* CMMPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FBB165BEA8D003AAE61 /* CMMPTableViewController.m */; };
 		227E29A3165D2E8A002FF81E /* CMMPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */; };
@@ -173,6 +175,8 @@
 		22A45D631666110700933452 /* CMExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A45D611666110700933452 /* CMExporter.m */; };
 		22A45D661666214F00933452 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D651666214F00933452 /* data.json */; };
 		22A45D671666214F00933452 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D651666214F00933452 /* data.json */; };
+		22A45D6E16663C4700933452 /* getWrans.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D6D16663C4700933452 /* getWrans.json */; };
+		22A45D6F16663C4700933452 /* getWrans.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D6D16663C4700933452 /* getWrans.json */; };
 		22E5C38B165E418F002AAAE0 /* CMConstTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */; };
 		22E5C38E165E4419002AAAE0 /* CMPartyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */; };
 		22E5C393165E456F002AAAE0 /* CMPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */; };
@@ -334,6 +338,7 @@
 		2248FFE9165BBAFB00723210 /* _Party.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Party.h; sourceTree = "<group>"; };
 		2248FFEA165BBAFB00723210 /* _Party.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Party.m; sourceTree = "<group>"; };
 		2248FFF6165BC32700723210 /* ConstituencyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstituencyTests.m; sourceTree = "<group>"; };
+		227A6FEC16663FB5004D511D /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		227E29A0165D2D83002FF81E /* MPTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTableTests.m; sourceTree = "<group>"; };
 		227E29A5165E3502002FF81E /* CMPartyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyTableViewController.h; sourceTree = "<group>"; };
 		227E29A6165E3502002FF81E /* CMPartyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPartyTableViewController.m; sourceTree = "<group>"; };
@@ -363,6 +368,7 @@
 		22A45D601666110700933452 /* CMExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExporter.h; sourceTree = "<group>"; };
 		22A45D611666110700933452 /* CMExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExporter.m; sourceTree = "<group>"; };
 		22A45D651666214F00933452 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		22A45D6D16663C4700933452 /* getWrans.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getWrans.json; sourceTree = "<group>"; };
 		22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstTableCell.xib; sourceTree = "<group>"; };
 		22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMPartyTableCell.xib; sourceTree = "<group>"; };
 		22E5C390165E456F002AAAE0 /* CMPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyDetailViewController.h; sourceTree = "<group>"; };
@@ -702,11 +708,13 @@
 		2248FFA9165BB39300723210 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				22A45D6D16663C4700933452 /* getWrans.json */,
 				22A45D651666214F00933452 /* data.json */,
 				22918127165F871F00C9601F /* getPerson.json */,
 				22086F9D165BE591003AAE61 /* allMPs.json */,
 				2248FFAA165BB39300723210 /* test-mps.json */,
 				22086F92165BD3BE003AAE61 /* test-update.json */,
+				227A6FEC16663FB5004D511D /* test.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1042,6 +1050,8 @@
 				22918151165F9BDA00C9601F /* getPerson.json in Resources */,
 				2248E2E61664FBFE00984EA7 /* red.png in Resources */,
 				22A45D661666214F00933452 /* data.json in Resources */,
+				22A45D6E16663C4700933452 /* getWrans.json in Resources */,
+				227A6FED16663FB5004D511D /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1066,8 @@
 				227E29AB165E3502002FF81E /* CMPartyTableView.xib in Resources */,
 				22918128165F871F00C9601F /* getPerson.json in Resources */,
 				22A45D671666214F00933452 /* data.json in Resources */,
+				22A45D6F16663C4700933452 /* getWrans.json in Resources */,
+				227A6FEE16663FB5004D511D /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

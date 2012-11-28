@@ -17,8 +17,10 @@
 @interface TWFYClient : AFHTTPClient
 
 @property (nonatomic, strong) id <TWFYClientDelegate> delegate;
+@property (nonatomic) BOOL operationCompleted;
 
 +(TWFYClient *)sharedInstance;
 -(void)getDataForPerson:(id)person;
+-(void)getWransForPerson:(id)person;
     
 @end

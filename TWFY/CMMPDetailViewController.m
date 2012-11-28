@@ -15,6 +15,8 @@
 @property (nonatomic, weak) IBOutlet UIImageView *mugshot;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *officeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *deptLabel;
+@property (nonatomic, weak) IBOutlet UILabel *personIDLabel;
 
 @end
 
@@ -38,10 +40,16 @@
     // Do any additional setup after loading the view from its nib.
     [self.nameLabel setText:[self.mp name]];
     
+    [self.personIDLabel setText:[NSString stringWithFormat:@"%@", [self.mp person_id]]];
+    
     if ([self.mp office]) {
         [self.officeLabel setText:[[self.mp office] position]];
+        [self.deptLabel setText:[[self.mp office] dept]];
+    } else {
+        [self.officeLabel setText:nil];
+        [self.deptLabel setText:nil];
     }
-    
+
     NSURL *image_url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.theyworkforyou.com%@", [self.mp image_url]]];
     [self getImage:image_url];
     

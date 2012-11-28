@@ -34,16 +34,34 @@
 -(void)stubNetworkCall {
     
 #ifdef DEBUG
-    
+    /*
     [OHHTTPStubs addRequestHandler:^OHHTTPStubsResponse*(NSURLRequest *request, BOOL onlyCheck) {
         
     //NSString *basename = [request.URL.absoluteString lastPathComponent];
+        
+        NSURL *requestURL = [request URL];
+        NSString *urlString = [requestURL absoluteString];
+        
+        if ([urlString rangeOfString:@"getPerson"].location != NSNotFound) {
+            // Handle getPerson
+            NSLog(@"Stubbing for getPerson");
+            return [OHHTTPStubsResponse responseWithFile:@"getPerson.json"
+                                             contentType:@"text/json"
+                                            responseTime:OHHTTPStubsDownloadSpeedEDGE];
+        }
 
-    return [OHHTTPStubsResponse responseWithFile:@"getPerson.json"
-                                     contentType:@"text/json"
-                                    responseTime:OHHTTPStubsDownloadSpeedEDGE];
+        if ([urlString rangeOfString:@"getWrans"].location != NSNotFound) {
+            // Handle getPerson
+            NSLog(@"Stubbing for getWrans");
+            return [OHHTTPStubsResponse responseWithFile:@"getWrans.json"
+                                             contentType:@"text/json"
+                                            responseTime:OHHTTPStubsDownloadSpeedEDGE];
+        }
+
+        return nil;
+        
     }];
-    
+    */
 #endif
     
 }
@@ -80,6 +98,44 @@
         
     }];
 
+}
+
+-(void)getWransForPerson:(id)person {
+    
+    //[self stubNetworkCall];
+    
+    // Set call back type
+    NSString *callType = @"getWrans";
+    
+    // Convert to person
+    MP *theMP = nil;
+    if ([person isKindOfClass:[MP class]]) {
+        theMP = (MP *)person;
+    } else {
+        self.operationCompleted = YES;
+        [self.delegate apiRepliedWithResponse:nil forCall:callType];
+        return;
+    }
+    
+    // Build API call
+    // getPerson?key=ABCD&id=12345
+    NSString *personID = [NSString stringWithFormat:@"%@", [theMP person_id]];
+    NSString *call = [NSString stringWithFormat:@"%@getWrans?key=%@&id=%@", kAPIEndpointURL, kAPIKey, personID];
+    
+    // Call TWFY API
+    [self getPath:call parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        self.operationCompleted = YES;
+        [self.delegate apiRepliedWithResponse:responseObject forCall:callType];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+        self.operationCompleted = YES;
+        [self.delegate apiRepliedWithResponse:nil forCall:callType];
+        
+    }];
+
+    
 }
 
 @end
