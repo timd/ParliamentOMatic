@@ -182,6 +182,15 @@
 		22A45D671666214F00933452 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D651666214F00933452 /* data.json */; };
 		22A45D6E16663C4700933452 /* getWrans.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D6D16663C4700933452 /* getWrans.json */; };
 		22A45D6F16663C4700933452 /* getWrans.json in Resources */ = {isa = PBXBuildFile; fileRef = 22A45D6D16663C4700933452 /* getWrans.json */; };
+		22A4F867166685E8008F00C6 /* CMInterestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4F865166685E8008F00C6 /* CMInterestsViewController.m */; };
+		22A4F868166685E8008F00C6 /* CMInterestsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A4F866166685E8008F00C6 /* CMInterestsView.xib */; };
+		22A4F86C16668612008F00C6 /* CMQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4F86A16668612008F00C6 /* CMQuestionsViewController.m */; };
+		22A4F86D16668612008F00C6 /* CMQuestionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A4F86B16668612008F00C6 /* CMQuestionsView.xib */; };
+		22A4F8711666862F008F00C6 /* CMDebatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4F86F1666862F008F00C6 /* CMDebatesViewController.m */; };
+		22A4F8721666862F008F00C6 /* CMDebatesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A4F8701666862F008F00C6 /* CMDebatesView.xib */; };
+		22A4F87C16678621008F00C6 /* CMMPMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4F87A16678621008F00C6 /* CMMPMainPageViewController.m */; };
+		22A4F87D16678621008F00C6 /* CMMPMainPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A4F87B16678621008F00C6 /* CMMPMainPageView.xib */; };
+		22A4F8C316679B5E008F00C6 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4F8C216679B5E008F00C6 /* SMPageControl.m */; };
 		22E5C38B165E418F002AAAE0 /* CMConstTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */; };
 		22E5C38E165E4419002AAAE0 /* CMPartyTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */; };
 		22E5C393165E456F002AAAE0 /* CMPartyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5C391165E456F002AAAE0 /* CMPartyDetailViewController.m */; };
@@ -379,6 +388,20 @@
 		22A45D611666110700933452 /* CMExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExporter.m; sourceTree = "<group>"; };
 		22A45D651666214F00933452 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		22A45D6D16663C4700933452 /* getWrans.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getWrans.json; sourceTree = "<group>"; };
+		22A4F864166685E8008F00C6 /* CMInterestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInterestsViewController.h; sourceTree = "<group>"; };
+		22A4F865166685E8008F00C6 /* CMInterestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMInterestsViewController.m; sourceTree = "<group>"; };
+		22A4F866166685E8008F00C6 /* CMInterestsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMInterestsView.xib; sourceTree = "<group>"; };
+		22A4F86916668612008F00C6 /* CMQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQuestionsViewController.h; sourceTree = "<group>"; };
+		22A4F86A16668612008F00C6 /* CMQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQuestionsViewController.m; sourceTree = "<group>"; };
+		22A4F86B16668612008F00C6 /* CMQuestionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMQuestionsView.xib; sourceTree = "<group>"; };
+		22A4F86E1666862F008F00C6 /* CMDebatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDebatesViewController.h; sourceTree = "<group>"; };
+		22A4F86F1666862F008F00C6 /* CMDebatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDebatesViewController.m; sourceTree = "<group>"; };
+		22A4F8701666862F008F00C6 /* CMDebatesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMDebatesView.xib; sourceTree = "<group>"; };
+		22A4F87916678621008F00C6 /* CMMPMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMPMainPageViewController.h; sourceTree = "<group>"; };
+		22A4F87A16678621008F00C6 /* CMMPMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMPMainPageViewController.m; sourceTree = "<group>"; };
+		22A4F87B16678621008F00C6 /* CMMPMainPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMMPMainPageView.xib; sourceTree = "<group>"; };
+		22A4F8C116679B5E008F00C6 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
+		22A4F8C216679B5E008F00C6 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		22E5C38A165E418F002AAAE0 /* CMConstTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMConstTableCell.xib; sourceTree = "<group>"; };
 		22E5C38D165E4419002AAAE0 /* CMPartyTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMPartyTableCell.xib; sourceTree = "<group>"; };
 		22E5C390165E456F002AAAE0 /* CMPartyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPartyDetailViewController.h; sourceTree = "<group>"; };
@@ -478,9 +501,11 @@
 		22086FCA165BEE0D003AAE61 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				22086FCB165BEE33003AAE61 /* CMMPDetailViewController.h */,
-				22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */,
-				22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */,
+				22A4F87816678606008F00C6 /* Main page */,
+				22A4F862166685C9008F00C6 /* Interests page */,
+				22A4F861166685C1008F00C6 /* Questions page */,
+				22A4F860166685AD008F00C6 /* Debates page */,
+				22A4F85E1666859F008F00C6 /* Person page */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -579,6 +604,7 @@
 		2248FF05165BB0FE00723210 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				22A4F8C016679B5E008F00C6 /* SMPageControl */,
 				22918143165F94EE00C9601F /* OHTTPStubs */,
 				2248FF79165BB25200723210 /* AFNetworking */,
 				2248FF06165BB11F00723210 /* MagicalRecord */,
@@ -910,6 +936,66 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		22A4F85E1666859F008F00C6 /* Person page */ = {
+			isa = PBXGroup;
+			children = (
+				22086FCB165BEE33003AAE61 /* CMMPDetailViewController.h */,
+				22086FCC165BEE33003AAE61 /* CMMPDetailViewController.m */,
+				22086FCD165BEE33003AAE61 /* CMMPDetailView.xib */,
+			);
+			name = "Person page";
+			sourceTree = "<group>";
+		};
+		22A4F860166685AD008F00C6 /* Debates page */ = {
+			isa = PBXGroup;
+			children = (
+				22A4F86E1666862F008F00C6 /* CMDebatesViewController.h */,
+				22A4F86F1666862F008F00C6 /* CMDebatesViewController.m */,
+				22A4F8701666862F008F00C6 /* CMDebatesView.xib */,
+			);
+			name = "Debates page";
+			sourceTree = "<group>";
+		};
+		22A4F861166685C1008F00C6 /* Questions page */ = {
+			isa = PBXGroup;
+			children = (
+				22A4F86916668612008F00C6 /* CMQuestionsViewController.h */,
+				22A4F86A16668612008F00C6 /* CMQuestionsViewController.m */,
+				22A4F86B16668612008F00C6 /* CMQuestionsView.xib */,
+			);
+			name = "Questions page";
+			sourceTree = "<group>";
+		};
+		22A4F862166685C9008F00C6 /* Interests page */ = {
+			isa = PBXGroup;
+			children = (
+				22A4F864166685E8008F00C6 /* CMInterestsViewController.h */,
+				22A4F865166685E8008F00C6 /* CMInterestsViewController.m */,
+				22A4F866166685E8008F00C6 /* CMInterestsView.xib */,
+			);
+			name = "Interests page";
+			sourceTree = "<group>";
+		};
+		22A4F87816678606008F00C6 /* Main page */ = {
+			isa = PBXGroup;
+			children = (
+				22A4F87916678621008F00C6 /* CMMPMainPageViewController.h */,
+				22A4F87A16678621008F00C6 /* CMMPMainPageViewController.m */,
+				22A4F87B16678621008F00C6 /* CMMPMainPageView.xib */,
+			);
+			name = "Main page";
+			sourceTree = "<group>";
+		};
+		22A4F8C016679B5E008F00C6 /* SMPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				22A4F8C116679B5E008F00C6 /* SMPageControl.h */,
+				22A4F8C216679B5E008F00C6 /* SMPageControl.m */,
+			);
+			name = SMPageControl;
+			path = Frameworks/SMPageControl;
+			sourceTree = "<group>";
+		};
 		22E5C389165E4179002AAAE0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,6 +1153,10 @@
 				22A45D661666214F00933452 /* data.json in Resources */,
 				22A45D6E16663C4700933452 /* getWrans.json in Resources */,
 				227A6FED16663FB5004D511D /* test.json in Resources */,
+				22A4F868166685E8008F00C6 /* CMInterestsView.xib in Resources */,
+				22A4F86D16668612008F00C6 /* CMQuestionsView.xib in Resources */,
+				22A4F8721666862F008F00C6 /* CMDebatesView.xib in Resources */,
+				22A4F87D16678621008F00C6 /* CMMPMainPageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,6 +1274,11 @@
 				22918148165F94EE00C9601F /* OHHTTPStubs.m in Sources */,
 				2291814A165F94EE00C9601F /* OHHTTPStubsResponse.m in Sources */,
 				22A45D621666110700933452 /* CMExporter.m in Sources */,
+				22A4F867166685E8008F00C6 /* CMInterestsViewController.m in Sources */,
+				22A4F86C16668612008F00C6 /* CMQuestionsViewController.m in Sources */,
+				22A4F8711666862F008F00C6 /* CMDebatesViewController.m in Sources */,
+				22A4F87C16678621008F00C6 /* CMMPMainPageViewController.m in Sources */,
+				22A4F8C316679B5E008F00C6 /* SMPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

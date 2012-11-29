@@ -7,7 +7,7 @@
 //
 
 #import "CMMPTableViewController.h"
-#import "CMMPDetailViewController.h"
+#import "CMMPMainPageViewController.h"
 #import "CMMPTableCell.h"
 
 #import "Party.h"
@@ -146,13 +146,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    CMMPDetailViewController *detailViewController = [[CMMPDetailViewController alloc] initWithNibName:@"CMMPDetailView" bundle:nil];
+    CMMPMainPageViewController *detailViewController = [[CMMPMainPageViewController alloc] initWithNibName:@"CMMPMainPageView" bundle:nil];
 
     // Pass the selected object to the new view controller.
     MP *selectedMP = [self.mpsArray objectAtIndex:indexPath.row];
     [detailViewController setMp:selectedMP];
     
-     [self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 
 }
 
