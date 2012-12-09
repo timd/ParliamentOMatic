@@ -8,6 +8,7 @@
 
 #import "CMMPDetailViewController.h"
 #import "MP.h"
+#import "Constituency.h"
 #import "Office.h"
 
 @interface CMMPDetailViewController ()
@@ -17,6 +18,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *officeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *deptLabel;
 @property (nonatomic, weak) IBOutlet UILabel *personIDLabel;
+@property (nonatomic, weak) IBOutlet UILabel *constituencyLabel;
 
 @end
 
@@ -55,6 +57,8 @@
     
     UIColor *background = [UIColor colorWithPatternImage:[UIImage imageNamed:@"red"]];
     [self.view setBackgroundColor:background];
+    
+    [self.constituencyLabel setText:[[self.mp constituency] name]];
 
 }
 

@@ -46,6 +46,7 @@
     CMInterestsViewController *interestsVC = [[CMInterestsViewController alloc] initWithNibName:@"CMInterestsView" bundle:nil];
     CMQuestionsViewController *questionsVC = [[CMQuestionsViewController alloc] initWithNibName:@"CMQuestionsView" bundle:nil];
     CMDebatesViewController *debatesVC = [[CMDebatesViewController alloc] initWithNibName:@"CMDebatesView" bundle:nil];
+    [debatesVC setMp:self.mp];
     
     self.pagesArray = [NSArray arrayWithObjects:detailVC, debatesVC, questionsVC, interestsVC, nil];
     

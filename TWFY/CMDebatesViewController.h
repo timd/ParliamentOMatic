@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMParser.h"
 
-@interface CMDebatesViewController : UIViewController
+@class MP;
+
+@interface CMDebatesViewController : UIViewController <CMParserDelegateProtocol>
+
+@property (nonatomic, strong) MP *mp;
 
 @end

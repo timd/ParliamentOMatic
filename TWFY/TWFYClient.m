@@ -34,7 +34,7 @@
 -(void)stubNetworkCall {
     
 #ifdef DEBUG
-    /*
+
     [OHHTTPStubs addRequestHandler:^OHHTTPStubsResponse*(NSURLRequest *request, BOOL onlyCheck) {
         
     //NSString *basename = [request.URL.absoluteString lastPathComponent];
@@ -57,11 +57,20 @@
                                              contentType:@"text/json"
                                             responseTime:OHHTTPStubsDownloadSpeedEDGE];
         }
+        
+        if ([urlString rangeOfString:@"getDebates"].location != NSNotFound) {
+            // Handle getPerson
+            NSLog(@"Stubbing for getDebates");
+            return [OHHTTPStubsResponse responseWithFile:@"getDebates.json"
+                                             contentType:@"text/json"
+                                            responseTime:OHHTTPStubsDownloadSpeedEDGE];
+        }
+        
 
         return nil;
         
     }];
-    */
+
 #endif
     
 }
@@ -139,7 +148,7 @@
 
 -(void)getDebatesForPerson:(id)person {
     
-    //[self stubNetworkCall];
+    [self stubNetworkCall];
     
     // Set call back type
     NSString *callType = @"getDebates";

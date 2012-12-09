@@ -107,7 +107,7 @@
     NSArray *rawArray = [NSJSONSerialization JSONObjectWithData:fileData options:NSJSONReadingMutableContainers error:&error];
     
     if (error) {
-        NSLog(@"Error: %@", error);
+        NSLog(@"", error);
         return;
     }
     
